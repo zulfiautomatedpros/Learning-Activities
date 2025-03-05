@@ -3,25 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WSP Sign-In Form</title>
+    <title>Sign In</title>
 </head>
 <body>
 
-    <h2>Task 5: WSP Sign-In Form (No Styling)</h2>
+    <h2>Welcome Back</h2>
+    <p>Manage, streamline, and thrive effortlessly.</p>
 
     <form>
-        <h3>Welcome Back</h3>
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><br><br>
 
-        <label>Email:</label><br>
-        <input type="email"><br><br>
+        <label for="password">Password</label><br>
+        <input type="password" id="password" name="password" required minlength="6"><br><br>
 
-        <label>Password:</label><br>
-        <input type="password"><br><br>
+        <input type="checkbox" id="remember" name="remember">
+        <label for="remember">Remember me</label><br><br>
 
-        <input type="checkbox"> Remember me  
-        <a href="#">Login with Code</a><br><br>
-
-        <button type="submit">Sign In</button>
+        <button type="submit" disabled>Sign In</button>
     </form>
 
 </body>
