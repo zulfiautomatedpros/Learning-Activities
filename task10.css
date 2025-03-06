@@ -1,0 +1,63 @@
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Form container */
+.form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+}
+
+/* Label styling */
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Input field styles with different border styles */
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    text-align: left;
+}
+
+#solid { border: 2px solid black; }
+#dashed { border: 2px dashed red; }
+#dotted { border: 2px dotted blue; }
+#double { border: 2px double green; }
+#groove { border: 2px groove purple; }
+#ridge { border: 2px ridge orange; }
+#inset { border: 2px inset gray; }
+#outset { border: 2px outset brown; }
+
+/* Button styling */
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #0056b3;
+}

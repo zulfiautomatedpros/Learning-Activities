@@ -1,0 +1,39 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container */
+.container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Rounded div */
+.rounded-box {
+    background: #3498db;
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 10px 0;
+    width: 250px;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Rounded buttons */
+.btn {
+    border: none;
+    color: rgb(52, 166, 73);
+    padding: 10px;
+    border-radius: 90px;
+}

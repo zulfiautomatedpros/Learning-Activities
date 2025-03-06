@@ -1,0 +1,83 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 50px;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Base Button Styles */
+.btn {
+    font-size: 16px;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Primary Button */
+.btn.primary {
+    background-color: #3498db;
+    color: white;
+}
+.btn.primary:hover {
+    background-color: #2980b9;
+}
+
+/* Secondary Button */
+.btn.secondary {
+    background-color: #e74c3c;
+    color: white;
+}
+.btn.secondary:hover {
+    background-color: #c0392b;
+}
+
+/* Outline Button */
+.btn.outline {
+    background: transparent;
+    color: #333;
+    border: 2px solid #333;
+}
+.btn.outline:hover {
+    background: #333;
+    color: white;
+}
+
+/* Rounded Button */
+.btn.rounded {
+    background-color: #2ecc71;
+    color: white;
+    border-radius: 30px;
+}
+.btn.rounded:hover {
+    background-color: #27ae60;
+}
+
+/* Gradient Button */
+.btn.gradient {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: white;
+    border-radius: 5px;
+}
+.btn.gradient:hover {
+    background: linear-gradient(to right, #feb47b, #ff7e5f);
+}
+
+/* Shadow Button */
+.btn.shadow {
+    background-color: #8e44ad;
+    color: white;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+.btn.shadow:hover {
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
