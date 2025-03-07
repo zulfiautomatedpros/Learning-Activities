@@ -1,0 +1,32 @@
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  /* Common box styles */
+  .box {
+    width: 300px;
+    margin: 20px auto;
+    border: 2px solid #333;
+    background: #fff;
+  }
+  
+  /* Box with no padding */
+  .no-padding p {
+    margin: 0;
+    padding: 10px; /* Minimal internal margin for text readability */
+  }
+  
+  /* Box with padding */
+  .with-padding {
+    padding: 30px; /* Noticeable padding added */
+  }
+  

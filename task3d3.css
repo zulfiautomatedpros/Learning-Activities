@@ -1,0 +1,34 @@
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+  }
+  
+  /* Heading styling */
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  /* Intro and conclusion paragraphs with margins */
+  .intro,
+  .conclusion {
+    margin: 20px auto;
+    max-width: 600px;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+  }
+  
+  /* Box with margin to separate from surrounding content */
+  .box {
+    background-color: #fff;
+    border: 2px solid #333;
+    margin: 30px auto; /* Adds vertical spacing */
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(154, 23, 23, 0.1);
+  }
+  

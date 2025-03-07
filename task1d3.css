@@ -1,0 +1,28 @@
+/* Basic page styling */
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    text-align: center;
+    padding: 40px;
+    margin: 0;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.border-box {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    /* Top border */
+    border-top: 8px solid red;
+    /* Right border */
+    border-right: 4px dotted green;
+    /* Bottom border */
+    border-bottom: 6px double blue;
+    /* Left border */
+    border-left: 2px dashed orange;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}

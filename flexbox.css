@@ -1,0 +1,78 @@
+/* =====================
+   Global & Body
+===================== */
+* {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'DM Sans', sans-serif;
+    background: #f9f9f9;
+  }
+  
+  /* =====================
+     Row
+  ===================== */
+  .row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  
+  /* =====================
+     Table Card
+  ===================== */
+  .table-card {
+    box-sizing: border-box;
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center text vertically */
+    align-items: center;     /* Center text horizontally */
+    padding: 12px;
+    gap: 24px;
+  
+    /* Updated dimensions: 56px wide, 91.09px tall */
+    width: 91.09px;
+    height: 56px;
+  
+    background: rgba(255, 255, 255, 0.6);
+    border-left: 4px solid #FF5F5F; /* default red, overridden by classes below */
+    backdrop-filter: blur(2px);
+    border-radius: 16px;
+  
+    flex: none;
+    order: 0;
+    flex-grow: 0; /* Do not stretch */
+  }
+  
+  /* Different border styles */
+  .green-border {
+    border-left: 4px solid #00A040; /* solid green */
+  }
+  .red-border {
+    border-left: 4px solid #FF5F5F; /* dotted red */
+  }
+  .strip-border {
+    border-left: 4px dashed #FF5F5F; /* dashed red */
+  }
+  
+  /* =====================
+     Main Title
+  ===================== */
+  .main-title {
+    /* center-aligned text */
+    text-align: center;
+  
+    /* snippet says ~20px font, 24px line-height */
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: #000000;
+    margin: 0; /* remove default span margin */
+  }
+  
