@@ -1,0 +1,221 @@
+/* =========================================
+   GLOBAL & BODY
+========================================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    padding: 14px;
+    font-family: 'DM Sans', sans-serif;
+    background: linear-gradient(to right, #FFFFFF, #FFEBE7);
+    min-height: 100vh;
+  }
+  
+  /* =========================================
+     PROFILE WIDGET (TOP BAR)
+  ========================================= */
+  .profile-widget {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    gap: 16px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .mcdonald-section {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .image2 {
+    width: 60px;
+    height: 60px;
+    background: url('mcdonalds.png') no-repeat center/cover;
+    border-radius: 16px;
+  }
+  
+  .mcdonald-text-frame p {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+  
+  .time-display {
+    font-weight: 700;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    color: #000000;
+  }
+  
+  /* =========================================
+     MAIN CONTAINER
+  ========================================= */
+  .main-container {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  /* ========== PREPARING SECTION ========== */
+  .preparing-frame {
+    flex: 2 1 790px;
+    min-width: 300px;
+    display: flex;
+    height: 694px;
+    flex-direction: column;
+    gap: 24px;
+    padding: 32px;
+    background: #FFFFFF;
+    border-radius: 24px;
+  }
+  
+  .preparing-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #000000;
+    text-align: center;
+  }
+  
+  .preparing-orders {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 12px;
+    width: 100%;
+  }
+  
+  .order-num {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    min-height: 64px;
+  }
+  
+  .order-number {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000000;
+  }
+  
+  /* ========== READY SECTION ========== */
+  .ready-frame {
+    flex: 1 1 300px;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 32px;
+    background: #FFFFFF;
+    border-radius: 24px;
+  }
+  
+  .ready-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #000000;
+    text-align: center;
+  }
+  
+  .ready-orders {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+  
+  .ready-big {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    background: #119717;
+    border-radius: 16px;
+    min-height: 128px;
+  }
+  
+  .ready-small {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    background: #119717;
+    border-radius: 16px;
+    min-height: 64px;
+  }
+  
+  .ready-big .ready-order-number {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.03em;
+    width: auto; /* Remove fixed width */
+    height: auto; /* Remove fixed height */
+  }
+  .ready-order-number {
+    font-size: 24px;
+    font-weight: 700;
+    color: #FFFFFF;
+  }
+  
+  
+  /* =========================================
+     RESPONSIVE ADJUSTMENTS
+  ========================================= */
+  @media (max-width: 768px) {
+    .main-container {
+      flex-direction: column;
+    }
+  
+    .preparing-orders {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    .profile-widget {
+      padding: 12px;
+    }
+  
+    .image2 {
+      width: 50px;
+      height: 50px;
+    }
+  
+    .mcdonald-text-frame p {
+      font-size: 18px;
+    }
+    .ready-orders {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      
+      .ready-small {
+        aspect-ratio: unset; /* Allow rectangle shape on mobile */
+        min-height: 60px;
+      }
+  }
+  
+  @media (max-width: 480px) {
+    .preparing-orders {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .preparing-frame,
+    .ready-frame {
+      padding: 24px;
+    }
+  
+    .order-number,
+    .ready-order-number {
+      font-size: 20px;
+    }
+  }
