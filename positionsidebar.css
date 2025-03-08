@@ -1,9 +1,7 @@
-/* ==========================
-   GLOBAL & BODY
-========================== */
+/* ========== GLOBAL & BODY ========== */
 * {
     box-sizing: border-box;
-    margin: 0; 
+    margin: 0;
     padding: 0;
   }
   body {
@@ -12,15 +10,13 @@
     min-height: 100vh;
   }
   
-  /* ==========================
-     STICKY HEADER
-  ========================== */
+  /* ========== STICKY HEADER ========== */
   .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 24px 16px;
-    gap: 282px;
+    gap: 20px;
     isolation: isolate;
   
     position: sticky;
@@ -29,8 +25,7 @@
   
     width: 100%;
     height: 96px;
-    background: rgba(255,255,255,0.8);
-    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    background: linear-gradient(to right, #FFFFFF, #FFEBE7);
   }
   .header-left {
     display: flex;
@@ -47,55 +42,66 @@
     font-weight: 700;
     font-size: 32px;
     line-height: 40px;
+    padding-left: 16px;
     letter-spacing: -0.03em;
     color: #000;
+    width: 181px;
+    height: 40px;
   }
+  /* Full Screen Button on far right */
   .fullscreen-frame {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    gap: 8px;
+    padding: 8px 16px 8px 12px;
+    gap: 4px;
+    
+    margin-left: auto; /* ensures it is positioned on the far right */
+    width: 124px;
+    height: 48px;
+    
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 48px;
+    
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    z-index: 1;
   }
   .fullscreen-icon {
     width: 20px;
     height: 20px;
-    border: 2px solid #000;
-    border-radius: 2px;
-    position: relative;
-  }
-  .fullscreen-icon::before,
-  .fullscreen-icon::after {
-    content: "";
-    position: absolute;
-    width: 6px; 
-    height: 6px;
-  }
-  .fullscreen-icon::before {
-    top: 2px; 
-    left: 2px;
-    border-top: 2px solid #000;
-    border-left: 2px solid #000;
-  }
-  .fullscreen-icon::after {
-    bottom: 2px; 
-    right: 2px;
-    border-bottom: 2px solid #000;
-    border-right: 2px solid #000;
-  }
-  .fullscreen-text {
-    font-weight: 700;
-    font-size: 14px;
-    color: #000;
+    padding-right: 4px;
+    border-radius: 0; /* or remove if not needed */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
   }
   
-  /* ==========================
-     NAVIGATION SIDEBAR
-  ========================== */
+  .fullscreen-text {
+    width: 72px;
+    height: 16px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+    white-space: nowrap;
+    
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+  
+  /* ========== LEFT SIDEBAR ========== */
   .navigation-v2 {
     position: fixed;
     left: 0;
     top: 100px; /* below sticky header */
     width: 96px;
-    height: 834px;
+    height: 650px;
+  
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -105,13 +111,15 @@
     isolation: isolate;
     z-index: 1;
   }
+  /* 6 circles, 4th is active (orange) */
   .main-menu-v2 {
     position: absolute;
-    left: 16px;
-    top: 50%;
-    transform: translateY(-50%);
     width: 64px;
     height: 344px;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-80%);
+  
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -126,24 +134,30 @@
     height: 48px;
     background: rgba(255,255,255,0.2);
     border-radius: 24px;
-    margin-bottom: 8px;
+    align-content: center;
+    padding-left: 14px;
   }
   .menu-item.active {
     background: #FF5634;
+    align-content: center;
+    padding-left: 14px;
   }
+  
+  /* Profile + Notification pinned at bottom */
   .other-links {
+    position: absolute;
+    bottom: 16px;  /* adjust as needed */
+    left: 16px;    /* adjust as needed */
+    width: 64px;   /* as per your snippet */
+    height: 120px; /* as per your snippet */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 8px;
     gap: 8px;
-    margin: 0 auto;
-    width: 64px;
-    height: 120px;
-    background: #FFF;
+    background: #FFFFFF;
     border-radius: 48px;
     z-index: 1;
-    
   }
   .profile-frame {
     width: 48px;
@@ -157,6 +171,8 @@
     height: 48px;
     background: rgba(0,0,0,0.1);
     border-radius: 48px;
+    align-content: center;
+    padding-left: 18px;
   }
   .notification-frame::before {
     content: '';
@@ -171,9 +187,7 @@
     z-index: 1;
   }
   
-  /* ==========================
-     PROFILE WIDGET
-  ========================== */
+  /* ========== MCDONALD’S PANEL (Profile Widget) ========== */
   .profile-widget {
     display: flex;
     justify-content: space-between;
@@ -183,7 +197,7 @@
     width: calc(100% - 96px);
     background: rgba(0,0,0,0.05);
     border-radius: 16px;
-    margin-top: 120px; /* below sticky header + nav */
+    margin-top: 0px; /* below sticky header + nav */
     margin-left: 96px; /* accommodate sidebar */
     margin-bottom: 20px;
   }
@@ -210,9 +224,7 @@
     color: #000;
   }
   
-  /* ==========================
-     MAIN CONTAINER
-  ========================== */
+  /* ========== MAIN CONTAINER (Preparing + Ready) ========== */
   .main-container {
     display: flex;
     gap: 24px;
@@ -223,7 +235,7 @@
   
   /* PREPARING FRAME */
   .preparing-frame {
-    flex: 2 1 700px;
+    flex: 2 1 600px;
     min-width: 300px;
     display: flex;
     flex-direction: column;
@@ -231,7 +243,6 @@
     padding: 32px;
     background: #FFF;
     border-radius: 24px;
-    text-align: center;
   }
   .preparing-title {
     text-align: center;
@@ -250,17 +261,20 @@
     gap: 8px;
     width: 715px; 
     height: 208px;
+    margin: 0 auto;
   }
+  
   .order-num {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items:center;
     padding: 8px 24px;
     gap: 8px;
     width: 106px;
     height: 64px;
     background: rgba(0,0,0,0.1);
     border-radius: 16px;
+
   }
   .order-number {
     font-size: 24px;
@@ -293,8 +307,9 @@
     align-items: flex-start;
     align-content: flex-start;
     gap: 8px;
-    width: 335px;
+    width: 335px; 
     height: 488px;
+    margin: 0 auto;
   }
   .ready-big {
     display: flex;
@@ -318,6 +333,20 @@
     background: #119717;
     border-radius: 16px;
   }
+  .ready-big .ready-order-number {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.03em;
+    width: auto; /* Remove fixed width */
+    height: auto; /* Remove fixed height */
+  }
+  .ready-small .ready-order-number {
+    font-size: 22px;
+    line-height: 40px;
+    letter-spacing: -0.03em;
+    width: auto; /* Remove fixed width */
+    height: auto; /* Remove fixed height */
+  }
   .ready-order-number {
     width: 77px;
     height: 40px;
@@ -328,14 +357,14 @@
     color: #FFF;
   }
   
-  /* ========== MEDIA QUERIES ========== */
+  /* ========== RESPONSIVE BREAKPOINT ========== */
   @media (max-width: 768px) {
     .main-container {
       flex-direction: column;
     }
     .preparing-orders,
     .ready-orders {
-      width: auto; 
+      width: auto;
       height: auto;
     }
   }
