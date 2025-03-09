@@ -1,0 +1,453 @@
+/* 
+========================================================
+BASE / RESET STYLES
+========================================================
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'DM Sans', sans-serif;
+    background: linear-gradient(to right, #FFFFFF, #FFEBE7);
+    color: #000000;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    /* Let the body fill the screen */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* 
+  ========================================================
+  HEADER SECTION
+  (Frame 1000007038)
+  ========================================================
+  */
+  .frame-1000007038 {
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  
+    /* Removed fixed height to allow responsiveness */
+    width: 834px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+  
+  /* LOGO CONTAINER (within the header) */
+  .logo-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 0 0;
+    gap: 8px;
+  
+    width: 100%;
+    max-width: 834px;
+  }
+  
+  /* Actual Logo Image */
+  .logo {
+    width: 56px;
+    height: 56px;
+    border-radius: 128px; /* design replication */
+  }
+  
+  /* Brand text */
+  .brand {
+    width: auto;
+    height: 32px;
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.02em;
+    color: #FF5634;
+  }
+  
+  /* HEADLINE container (Frame 1000007037) */
+  .frame-1000007037 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+  
+    width: 100%;
+    max-width: 834px;
+    margin: 0 auto;
+  }
+  
+  /* Headline styling */
+  .headline {
+    width: auto;
+    height: auto;
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: -0.03em;
+    color: #000000;
+  }
+  
+  /* 
+  ========================================================
+  BODY SECTION
+  (Frame 1000007039)
+  ========================================================
+  */
+  .frame-1000007039 {
+    /* Auto layout */
+    flex: 1; /* let it grow to fill the screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    /* Removed large fixed height; replaced with flexible layout */
+    width: 834px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 40px 16px;
+  }
+  
+  /* 
+  (Frame 1000006827) container for the sign-up (login) form
+  */
+  .frame-1000006827 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  
+    /* Let it size automatically */
+    width: 360px;
+    max-width: 100%;
+  }
+  
+  /* Sign up (login) form container */
+  .sign-up-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  
+    width: 360px;
+    max-width: 100%;
+  }
+  
+  /* 
+  ========================================================
+  HEADING (Frame 1000006257 / heading)
+  ========================================================
+  */
+  .frame-1000006257 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  
+    width: 360px;
+    max-width: 100%;
+  }
+  
+  .heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  
+    width: 100%;
+  }
+  
+  .frame-1000006373 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 219px;
+    height: 40px;
+  }
+  
+  /* Description text below heading */
+  .description {
+    width: 305px;
+    max-width: 100%;
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: -0.01em;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  
+  /* 
+  ========================================================
+  FORM FIELDS (Frame 1000006258)
+  ========================================================
+  */
+  .frame-1000006258 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  
+    width: 360px;
+    max-width: 100%;
+  }
+  
+  /* Standard Input container */
+  .standard-input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  
+    width: 100%;
+    max-width: 360px;
+  }
+  
+  /* Label wrapper */
+  .input-label {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0 16px;
+    gap: 8px;
+  
+    width: 100%;
+    height: 16px;
+  }
+  
+  /* Label text */
+  .label {
+    width: 328px;
+    max-width: 100%;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Text field container */
+  .inputs-text-field {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+  
+    width: 100%;
+    max-width: 360px;
+    height: 48px;
+  
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 24px;
+  }
+  
+  /* Input content (where the actual input lives) */
+  .input-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 16px;
+  
+    width: 100%;
+    height: 48px;
+  }
+  
+  .value {
+    flex: 1;
+    width: auto;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.01em;
+    color: #000000;
+    border: none;
+    background: transparent;
+    outline: none;
+  }
+  
+  /* 
+    For the password container, we want the eye icon on the right side. 
+    So we set justify-content: space-between in .password-content 
+  */
+  .password-content {
+    justify-content: space-between;
+  }
+  
+  /* Eye icon */
+  .icon-eye {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    flex-shrink: 0; /* so it doesn't scale down */
+  }
+  
+  /* 
+  ========================================================
+  CHECKBOX / REMEMBER ME / LOGIN WITH CODE
+  (Frame 1000006828)
+  ========================================================
+  */
+  .frame-1000006828 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 33px;
+  
+    width: 100%;
+    max-width: 360px;
+    height: 48px;
+  }
+  
+  .checkbox-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+  
+    width: 208px;
+    max-width: 100%;
+    height: 28px;
+  }
+  
+  .checkbox-symbol {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  
+    width: 28px;
+    height: 28px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .text {
+    width: 172px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.01em;
+    color: #000000;
+  }
+  
+  .simple-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  
+    width: 119px;
+    height: 48px;
+  }
+  
+  .simple-button {
+    width: 119px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration-line: underline;
+    color: #000000;
+  }
+  
+  /* 
+  ========================================================
+  PRIMARY BUTTON (Sign In)
+  ========================================================
+  */
+  .standard-buttons-large {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 32px;
+    gap: 8px;
+  
+    width: 360px;
+    max-width: 100%;
+    height: 48px;
+    background: #000000;
+    border-radius: 32px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .standard-buttons-large:hover {
+    background: #333333; /* simple hover effect */
+  }
+  
+  .text-button {
+    width: auto;
+    height: 24px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: #FFFFFF;
+  }
+  
+  /* 
+  ========================================================
+  MEDIA QUERIES: ORIENTATION & SIZE
+  ========================================================
+  */
+  
+  /* 
+    Orientation-based: For portrait mode, adjust layout/padding if needed 
+    (You can further refine these for your needs)
+  */
+  @media (orientation: portrait) {
+    .frame-1000007039 {
+      padding: 20px;
+    }
+    .headline {
+      font-size: 28px;
+    }
+    .description {
+      font-size: 14px;
+    }
+  }
+  
+  /* You can still use max-width queries for narrower screens if desired */
+  @media (max-width: 600px) {
+    .headline {
+      font-size: 24px;
+      line-height: 30px;
+    }
+    .description {
+      font-size: 14px;
+      width: 90%;
+    }
+  }
+  

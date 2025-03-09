@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Orderific Service Panel</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="portraitdesign.css" />
+</head>
+<body>
+
+  <!-- HEADER SECTION -->
+  <header class="frame-1000007038">
+    <!-- Logo container -->
+    <div class="logo-container">
+      <!-- Logo -->
+      <!-- Adjust `src` if you have an actual image file -->
+      <img src="orderific.png" alt="Orderific Logo" class="logo" />
+      <div class="brand">Orderific</div>
+    </div>
+
+    <!-- Headline container -->
+    <div class="frame-1000007037">
+      <h1 class="headline">Service Panel</h1>
+    </div>
+  </header>
+  
+  <!-- BODY SECTION -->
+  <main class="frame-1000007039">
+    <div class="frame-1000006827">
+      <!-- Sign up (login) form container -->
+      <div class="sign-up-form">
+        <!-- Heading -->
+        <div class="frame-1000006257">
+          <div class="heading">
+            <div class="frame-1000006373">
+              <h1 class="headline">Welcome Back</h1>
+            </div>
+            <p class="description">
+              Manage, streamline, and thrive effortlessly.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Form Fields -->
+        <div class="frame-1000006258">
+          <!-- Email Field -->
+          <div class="standard-input">
+            <div class="input-label">
+              <label for="email" class="label">Email</label>
+            </div>
+            <div class="inputs-text-field">
+              <div class="input-content">
+                <input 
+                  type="email" 
+                  id="email" 
+                  class="value" 
+                  placeholder="samsmith@gmail.com" 
+                  required 
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Password Field -->
+          <div class="standard-input">
+            <div class="input-label">
+              <label for="password" class="label">Password</label>
+            </div>
+            <div class="inputs-text-field">
+              <!-- 
+                The input-content is now flex row 
+                so we can place an "eye" icon to the right 
+              -->
+              <div class="input-content password-content">
+                <input 
+                  type="password" 
+                  id="password" 
+                  class="value" 
+                  placeholder="••••••••" 
+                  required 
+                />
+                <!-- Eye icon on the right side -->
+                <img 
+                  src="eye-icon.png" 
+                  alt="Toggle Password Visibility" 
+                  class="icon-eye" 
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Remember Me & "Login with Code" -->
+          <div class="frame-1000006828">
+            <div class="checkbox-item">
+              <div class="checkbox-symbol">
+                <input 
+                  type="checkbox" 
+                  id="rememberMe" 
+                  style="display:none;" 
+                />
+              </div>
+              <label for="rememberMe" class="text">Remember me</label>
+            </div>
+
+            <div class="simple-btn">
+              <a href="#" class="simple-button">Login with Code</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sign In Button -->
+        <button class="standard-buttons-large">
+          <span class="text-button">Sign in</span>
+        </button>
+      </div>
+    </div>
+  </main>
+
+
+</body>
+</html>
