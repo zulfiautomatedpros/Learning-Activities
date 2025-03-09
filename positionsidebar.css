@@ -1,4 +1,6 @@
-/* ========== GLOBAL & BODY ========== */
+/* ======================
+   GLOBAL & BODY
+====================== */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -10,7 +12,9 @@
     min-height: 100vh;
   }
   
-  /* ========== STICKY HEADER ========== */
+  /* ======================
+     STICKY HEADER
+  ====================== */
   .header {
     display: flex;
     justify-content: space-between;
@@ -45,39 +49,33 @@
     padding-left: 16px;
     letter-spacing: -0.03em;
     color: #000;
+    /* optional fixed dimension
     width: 181px;
-    height: 40px;
+    height: 40px; */
   }
-  /* Full Screen Button on far right */
+  
+  /* Full Screen Button */
   .fullscreen-frame {
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 8px 16px 8px 12px;
     gap: 4px;
-    
-    margin-left: auto; /* ensures it is positioned on the far right */
+  
+    margin-left: auto;
     width: 124px;
     height: 48px;
-    
+  
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 48px;
-    
-    flex: none;
-    order: 1;
-    flex-grow: 0;
     z-index: 1;
   }
   .fullscreen-icon {
     width: 20px;
     height: 20px;
     padding-right: 4px;
-    border-radius: 0; /* or remove if not needed */
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+    border-radius: 0;
   }
-  
   .fullscreen-text {
     width: 72px;
     height: 16px;
@@ -88,30 +86,24 @@
     line-height: 16px;
     color: #000000;
     white-space: nowrap;
-    
-    flex: none;
-    order: 1;
-    flex-grow: 0;
   }
   
-  /* ========== LEFT SIDEBAR ========== */
+  /* ======================
+     LEFT SIDEBAR
+  ====================== */
   .navigation-v2 {
     position: fixed;
     left: 0;
     top: 100px; /* below sticky header */
     width: 96px;
     height: 650px;
-  
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
     padding: 16px;
     gap: 221px;
     isolation: isolate;
     z-index: 1;
   }
-  /* 6 circles, 4th is active (orange) */
   .main-menu-v2 {
     position: absolute;
     width: 64px;
@@ -129,27 +121,30 @@
     border-radius: 48px;
     z-index: 2;
   }
+  /* 6 circles, 4th is active (orange) */
   .menu-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 48px;
     height: 48px;
     background: rgba(255,255,255,0.2);
     border-radius: 24px;
-    align-content: center;
-    padding-left: 14px;
+    /* Override the left padding: */
+    padding-left: 0 !important; 
   }
   .menu-item.active {
     background: #FF5634;
-    align-content: center;
     padding-left: 14px;
   }
   
   /* Profile + Notification pinned at bottom */
   .other-links {
     position: absolute;
-    bottom: 16px;  /* adjust as needed */
-    left: 16px;    /* adjust as needed */
-    width: 64px;   /* as per your snippet */
-    height: 120px; /* as per your snippet */
+    bottom: 16px;
+    left: 16px;
+    width: 64px;
+    height: 120px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -166,13 +161,16 @@
     border-radius: 48px;
   }
   .notification-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     width: 48px;
     height: 48px;
     background: rgba(0,0,0,0.1);
     border-radius: 48px;
-    align-content: center;
-    padding-left: 18px;
+    /* Remove extra padding if present: */
+    padding-left: 0 !important; 
   }
   .notification-frame::before {
     content: '';
@@ -187,7 +185,9 @@
     z-index: 1;
   }
   
-  /* ========== MCDONALD’S PANEL (Profile Widget) ========== */
+  /* ======================
+     MCDONALD’S PANEL
+  ====================== */
   .profile-widget {
     display: flex;
     justify-content: space-between;
@@ -197,7 +197,7 @@
     width: calc(100% - 96px);
     background: rgba(0,0,0,0.05);
     border-radius: 16px;
-    margin-top: 0px; /* below sticky header + nav */
+    margin-top: 0px; 
     margin-left: 96px; /* accommodate sidebar */
     margin-bottom: 20px;
   }
@@ -224,7 +224,9 @@
     color: #000;
   }
   
-  /* ========== MAIN CONTAINER (Preparing + Ready) ========== */
+  /* ======================
+     MAIN CONTAINER
+  ====================== */
   .main-container {
     display: flex;
     gap: 24px;
@@ -250,7 +252,6 @@
     font-weight: 700;
     color: #000;
     margin: 0 auto;
-    display: block;
   }
   .preparing-orders {
     display: flex;
@@ -259,22 +260,20 @@
     align-items: flex-start;
     align-content: center;
     gap: 8px;
-    width: 715px; 
+    width: 715px;
     height: 208px;
     margin: 0 auto;
   }
-  
   .order-num {
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     padding: 8px 24px;
     gap: 8px;
     width: 106px;
     height: 64px;
     background: rgba(0,0,0,0.1);
     border-radius: 16px;
-
   }
   .order-number {
     font-size: 24px;
@@ -299,7 +298,6 @@
     font-weight: 700;
     color: #000;
     margin: 0 auto;
-    display: block;
   }
   .ready-orders {
     display: flex;
@@ -337,15 +335,15 @@
     font-size: 32px;
     line-height: 40px;
     letter-spacing: -0.03em;
-    width: auto; /* Remove fixed width */
-    height: auto; /* Remove fixed height */
+    width: auto;
+    height: auto;
   }
   .ready-small .ready-order-number {
     font-size: 22px;
     line-height: 40px;
     letter-spacing: -0.03em;
-    width: auto; /* Remove fixed width */
-    height: auto; /* Remove fixed height */
+    width: auto;
+    height: auto;
   }
   .ready-order-number {
     width: 77px;
@@ -357,15 +355,75 @@
     color: #FFF;
   }
   
-  /* ========== RESPONSIVE BREAKPOINT ========== */
+  /* ======================
+     RESPONSIVE BREAKPOINT
+  ====================== */
   @media (max-width: 768px) {
-    .main-container {
-      flex-direction: column;
+    /* 1) Sidebar becomes horizontal at the bottom or hides entirely */
+    .navigation-v2 {
+      position: static;
+      width: 100%;
+      height: auto;
+      flex-direction: row;
+      align-items: center;
+      padding: 8px;
+      gap: 8px;
+      margin-bottom: 16px; /* spacing below if needed */
+      background: transparent; /* or #fff if you want a bar */
     }
+    .main-menu-v2 {
+      position: static;
+      transform: none;
+      width: auto;
+      height: auto;
+      flex-direction: row;
+      border-radius: 24px;
+      margin-right: auto;
+      
+    }
+    .menu-item {
+      margin: 0 4px;
+      padding-left: 0;
+    }
+    .other-links {
+      position: static;
+      width: auto;
+      height: auto;
+      margin-left: auto;
+      display: flex;
+      flex-direction: row;
+      background: #FFFFFF;
+      border-radius: 24px;
+    }
+    .profile-frame,
+    .notification-frame {
+      margin: 0 8px;
+    }
+  
+    /* 2) Stack the main container columns */
+    .main-container {
+      margin-left: 0;
+      width: 100%;
+      flex-direction: column;
+      padding: 0 16px; /* side padding if you want */
+    }
+    .profile-widget {
+      margin-left: 0;
+      width: 100%;
+    }
+  
+    /* 3) Let orders auto-size */
     .preparing-orders,
     .ready-orders {
       width: auto;
       height: auto;
+      margin: 0 auto;
+    }
+    /* Adjust the frames if needed */
+    .preparing-frame,
+    .ready-frame {
+      width: 100%;
+      margin-bottom: 16px;
     }
   }
   
