@@ -19,7 +19,7 @@
     display: grid;
     grid-template-columns: 40% 60%;
     width: 100vw;
-    height: 100vh;
+    height: auto;
     margin: 0 auto;
     background: linear-gradient(67.75deg, #FFFFFF 19.18%, #FFEBE7 75.31%);
     align-items: start;
@@ -50,8 +50,7 @@
     display: grid;
     margin: 0 auto;
     overflow: hidden;
-    
-    /* Arrange children using grid: Top row for logo and bottom row for content */\n  grid-template-rows: auto 1fr;
+    grid-template-rows: auto 1fr;
   }
   
   /* Overlays */
