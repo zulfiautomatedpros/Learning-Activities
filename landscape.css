@@ -149,5 +149,17 @@
       line-height: 18px;
       width: 100%;
     }
+    @media (orientation: landscape) {
+      .frame-1000007039 {
+        padding: 20px;
+      }
+      .headline {
+        font-size: 28px;
+      }
+      .description {
+        font-size: 14px;
+      }
+    }
+    
   }
   
