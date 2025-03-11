@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Order Status</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href="./output.css" rel="stylesheet" />
+</head>
+<body class="min-h-screen bg-gradient-to-r from-white to-[#FFEBE7] font-['DM Sans']">
+
+  <!-- Sticky Header -->
+  <header class="sticky top-0 z-[999] flex justify-between items-center px-4 py-6 gap-5 w-full h-[96px] bg-gradient-to-r from-white to-[#FFEBE7]">
+    <!-- Left: Logo + Title -->
+    <div class="flex items-center gap-2">
+      <img src="orderific.png" alt="Orderific Logo" class="w-10 h-10 object-cover" />
+      <h1 class="whitespace-nowrap font-bold text-[32px] leading-[40px] pl-4 tracking-[-0.03em] text-black">
+        Order Status
+      </h1>
+    </div>
+    <!-- Right: Full Screen Button -->
+    <div class="flex flex-row items-center py-2 px-4 gap-2 ml-auto w-[124px] h-12 border border-[rgba(0,0,0,0.1)] rounded-full">
+      <div class="w-5 h-5">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 10V5H1.5V8.5H5V10H0ZM8.5 5V1.5H5V0H10V5H8.5Z" fill="black"/>
+        </svg>
+      </div>
+      <p class="font-bold text-[14px] leading-4 text-black whitespace-nowrap">
+        FullScreen
+      </p>
+    </div>
+  </header>
+
+  <!-- Left Sidebar -->
+  <aside class="fixed left-0 top-[96px] w-24 h-[650px] flex flex-col p-4 gap-[221px] z-10">
+    <div class="absolute w-16 h-[344px] left-4 top-1/2 -translate-y-[80%] flex flex-col items-center p-2 gap-2 bg-black rounded-full z-20">
+      <!-- 6 circles, 4th active -->
+      <div class="flex justify-center items-center w-12 h-12 bg-[rgba(255,255,255,0.2)] rounded-full">
+        <svg width="20" height="20" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="..."/></svg>
+      </div>
+      <div class="flex justify-center items-center w-12 h-12 bg-[rgba(255,255,255,0.2)] rounded-full">
+        <svg width="20" height="20" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="..."/></svg>
+      </div>
+      <div class="flex justify-center items-center w-12 h-12 bg-[rgba(255,255,255,0.2)] rounded-full">
+        <svg width="20" height="20" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="..."/></svg>
+      </div>
+      <!-- Active circle (orange) -->
+      <div class="flex justify-center items-center w-12 h-12 bg-[#FF5634] rounded-full">
+        <svg width="20" height="20" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="..."/></svg>
+      </div>
+      <div class="flex justify-center items-center w-12 h-12 bg-[rgba(255,255,255,0.2)] rounded-full">
+        <svg width="20" height="20" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="..."/></svg>
+      </div>
+      <div class="flex justify-center items-center w-12 h-12 bg-[rgba(255,255,255,0.2)] rounded-full">
+        <svg width="20" height="20" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="..."/></svg>
+      </div>
+    </div>
+    <!-- Profile + Notification pinned at bottom -->
+    <div class="absolute bottom-4 left-4 w-16 h-[120px] flex flex-col items-start p-2 gap-2 bg-white rounded-full z-10">
+      <div class="w-12 h-12 bg-[url('profile.png')] bg-cover bg-center rounded-full"></div>
+      <div class="relative flex justify-center items-center w-12 h-12 bg-[rgba(0,0,0,0.1)] rounded-full">
+        <svg width="12" height="16" fill="black" xmlns="http://www.w3.org/2000/svg"><path d="..."/></svg>
+        <!-- Red notification dot -->
+        <span class="absolute w-2 h-2 top-1 right-1 bg-[#E10E0E] border border-white rounded-full"></span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- McDonald’s Panel -->
+  <div class="flex justify-between items-center p-4 gap-4 w-[calc(100%-6rem)] ml-24 mt-0 mb-5 bg-[rgba(0,0,0,0.05)] rounded-[16px]">
+    <div class="flex items-center gap-4">
+      <img src="mcdonalds.png" alt="McDonald’s" class="w-[60px] h-[60px] rounded-[16px] object-cover" />
+      <p class="m-0 text-[20px] font-medium tracking-[-0.01em]">McDonald’s</p>
+    </div>
+    <p class="font-bold text-black text-2xl">15:03</p>
+  </div>
+
+  <!-- Main Container -->
+  <div class="flex flex-wrap md:flex-nowrap gap-6 w-[calc(100%-6rem)] ml-24 items-start">
+
+    <!-- Preparing Frame -->
+    <div class="flex flex-col gap-6 p-8 bg-white rounded-[24px] flex-auto min-w-[300px]">
+      <p class="text-center text-[32px] font-bold text-black m-0">
+        Preparing
+      </p>
+      <div class="flex flex-wrap gap-2 justify-center">
+        <!-- 15 boxes -->
+        <div class="flex justify-center items-center p-2 px-6 w-[106px] h-[64px] bg-[rgba(0,0,0,0.1)] rounded-[16px]">
+          <p class="text-[24px] font-bold text-black m-0">3885</p>
+        </div>
+        <!-- Repeat as needed for all 15 -->
+        <div class="flex justify-center items-center p-2 px-6 w-[106px] h-[64px] bg-[rgba(0,0,0,0.1)] rounded-[16px]">
+          <p class="text-[24px] font-bold text-black m-0">3885</p>
+        </div>
+        <!-- etc. -->
+      </div>
+    </div>
+
+    <!-- Ready Frame -->
+    <div class="flex flex-col gap-6 p-8 bg-white rounded-[24px] flex-auto min-w-[250px]">
+      <p class="text-center text-[32px] font-bold text-black m-0">
+        Ready
+      </p>
+      <div class="flex flex-wrap gap-2 justify-center">
+        <!-- Big green box -->
+        <div class="flex justify-center items-center p-6 w-full bg-[#119717] rounded-[16px]">
+          <p class="text-[32px] font-bold tracking-[-0.03em] text-white m-0">3885</p>
+        </div>
+        <!-- 10 small boxes -->
+        <div class="flex justify-center items-center p-2 px-6 w-[106px] h-[64px] bg-[#119717] rounded-[16px]">
+          <p class="text-[24px] font-bold text-white m-0">3885</p>
+        </div>
+        <!-- Repeat as needed -->
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Responsive Adjustments -->
+  <style>
+    @media (max-width: 768px) {
+      /* Sidebar becomes horizontal at top or bottom, or hidden entirely. Example: push it to top. */
+      aside {
+        position: static !important;
+        width: 100% !important;
+        height: auto !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        padding: 8px !important;
+        gap: 8px !important;
+        background: transparent !important;
+        margin-bottom: 16px;
+      }
+      aside > div {
+        position: static !important;
+        transform: none !important;
+        margin-right: auto;
+        width: auto !important;
+        height: auto !important;
+        flex-direction: row !important;
+        border-radius: 24px !important;
+      }
+      .other-links {
+        position: static !important;
+        width: auto !important;
+        height: auto !important;
+        margin-left: auto !important;
+        flex-direction: row !important;
+        background: #fff !important;
+        border-radius: 24px !important;
+      }
+      .profile-widget,
+      .main-container {
+        margin-left: 0 !important;
+        width: 100% !important;
+      }
+      .main-container {
+        flex-direction: column !important;
+        padding: 0 16px;
+      }
+    }
+  </style>
+</body>
+</html>
