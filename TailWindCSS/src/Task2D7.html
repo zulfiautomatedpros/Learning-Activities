@@ -2,164 +2,264 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>Order Status</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <link href="./output.css" rel="stylesheet" />
-</head>
-<body class="min-h-screen bg-gradient-to-r from-white to-[#FFEBE7] font-['DM Sans']">
-
-  <!-- Sticky Header -->
-  <header class="sticky top-0 z-[999] flex justify-between items-center px-4 py-6 gap-5 w-full h-[96px] bg-gradient-to-r from-white to-[#FFEBE7]">
-    <!-- Left: Logo + Title -->
-    <div class="flex items-center gap-2">
-      <img src="orderific.png" alt="Orderific Logo" class="w-10 h-10 object-cover" />
-      <h1 class="whitespace-nowrap font-bold text-[32px] leading-[40px] pl-4 tracking-[-0.03em] text-black">
-        Order Status
-      </h1>
-    </div>
-    <!-- Right: Full Screen Button -->
-    <div class="flex flex-row items-center py-2 px-4 gap-2 ml-auto w-[124px] h-12 border border-[rgba(0,0,0,0.1)] rounded-full">
-      <div class="w-5 h-5">
-        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0 10V5H1.5V8.5H5V10H0ZM8.5 5V1.5H5V0H10V5H8.5Z" fill="black"/>
-        </svg>
-      </div>
-      <p class="font-bold text-[14px] leading-4 text-black whitespace-nowrap">
-        FullScreen
-      </p>
-    </div>
-  </header>
-
-  <!-- Left Sidebar -->
-  <aside class="fixed left-0 top-[96px] w-24 h-[650px] flex flex-col p-4 gap-[221px] z-10">
-    <div class="absolute w-16 h-[344px] left-4 top-1/2 -translate-y-[80%] flex flex-col items-center p-2 gap-2 bg-black rounded-full z-20">
-      <!-- 6 circles, 4th active -->
-      <div class="flex justify-center items-center w-12 h-12 bg-[rgba(255,255,255,0.2)] rounded-full">
-        <svg width="20" height="20" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="..."/></svg>
-      </div>
-      <div class="flex justify-center items-center w-12 h-12 bg-[rgba(255,255,255,0.2)] rounded-full">
-        <svg width="20" height="20" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="..."/></svg>
-      </div>
-      <div class="flex justify-center items-center w-12 h-12 bg-[rgba(255,255,255,0.2)] rounded-full">
-        <svg width="20" height="20" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="..."/></svg>
-      </div>
-      <!-- Active circle (orange) -->
-      <div class="flex justify-center items-center w-12 h-12 bg-[#FF5634] rounded-full">
-        <svg width="20" height="20" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="..."/></svg>
-      </div>
-      <div class="flex justify-center items-center w-12 h-12 bg-[rgba(255,255,255,0.2)] rounded-full">
-        <svg width="20" height="20" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="..."/></svg>
-      </div>
-      <div class="flex justify-center items-center w-12 h-12 bg-[rgba(255,255,255,0.2)] rounded-full">
-        <svg width="20" height="20" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="..."/></svg>
-      </div>
-    </div>
-    <!-- Profile + Notification pinned at bottom -->
-    <div class="absolute bottom-4 left-4 w-16 h-[120px] flex flex-col items-start p-2 gap-2 bg-white rounded-full z-10">
-      <div class="w-12 h-12 bg-[url('profile.png')] bg-cover bg-center rounded-full"></div>
-      <div class="relative flex justify-center items-center w-12 h-12 bg-[rgba(0,0,0,0.1)] rounded-full">
-        <svg width="12" height="16" fill="black" xmlns="http://www.w3.org/2000/svg"><path d="..."/></svg>
-        <!-- Red notification dot -->
-        <span class="absolute w-2 h-2 top-1 right-1 bg-[#E10E0E] border border-white rounded-full"></span>
-      </div>
-    </div>
-  </aside>
-
-  <!-- McDonald’s Panel -->
-  <div class="flex justify-between items-center p-4 gap-4 w-[calc(100%-6rem)] ml-24 mt-0 mb-5 bg-[rgba(0,0,0,0.05)] rounded-[16px]">
-    <div class="flex items-center gap-4">
-      <img src="mcdonalds.png" alt="McDonald’s" class="w-[60px] h-[60px] rounded-[16px] object-cover" />
-      <p class="m-0 text-[20px] font-medium tracking-[-0.01em]">McDonald’s</p>
-    </div>
-    <p class="font-bold text-black text-2xl">15:03</p>
-  </div>
-
-  <!-- Main Container -->
-  <div class="flex flex-wrap md:flex-nowrap gap-6 w-[calc(100%-6rem)] ml-24 items-start">
-
-    <!-- Preparing Frame -->
-    <div class="flex flex-col gap-6 p-8 bg-white rounded-[24px] flex-auto min-w-[300px]">
-      <p class="text-center text-[32px] font-bold text-black m-0">
-        Preparing
-      </p>
-      <div class="flex flex-wrap gap-2 justify-center">
-        <!-- 15 boxes -->
-        <div class="flex justify-center items-center p-2 px-6 w-[106px] h-[64px] bg-[rgba(0,0,0,0.1)] rounded-[16px]">
-          <p class="text-[24px] font-bold text-black m-0">3885</p>
-        </div>
-        <!-- Repeat as needed for all 15 -->
-        <div class="flex justify-center items-center p-2 px-6 w-[106px] h-[64px] bg-[rgba(0,0,0,0.1)] rounded-[16px]">
-          <p class="text-[24px] font-bold text-black m-0">3885</p>
-        </div>
-        <!-- etc. -->
-      </div>
-    </div>
-
-    <!-- Ready Frame -->
-    <div class="flex flex-col gap-6 p-8 bg-white rounded-[24px] flex-auto min-w-[250px]">
-      <p class="text-center text-[32px] font-bold text-black m-0">
-        Ready
-      </p>
-      <div class="flex flex-wrap gap-2 justify-center">
-        <!-- Big green box -->
-        <div class="flex justify-center items-center p-6 w-full bg-[#119717] rounded-[16px]">
-          <p class="text-[32px] font-bold tracking-[-0.03em] text-white m-0">3885</p>
-        </div>
-        <!-- 10 small boxes -->
-        <div class="flex justify-center items-center p-2 px-6 w-[106px] h-[64px] bg-[#119717] rounded-[16px]">
-          <p class="text-[24px] font-bold text-white m-0">3885</p>
-        </div>
-        <!-- Repeat as needed -->
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Responsive Adjustments -->
+  <!-- DM Sans Font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Additional utilities for pseudo-element styling -->
   <style>
-    @media (max-width: 768px) {
-      /* Sidebar becomes horizontal at top or bottom, or hidden entirely. Example: push it to top. */
-      aside {
-        position: static !important;
-        width: 100% !important;
-        height: auto !important;
-        flex-direction: row !important;
-        align-items: center !important;
-        padding: 8px !important;
-        gap: 8px !important;
-        background: transparent !important;
-        margin-bottom: 16px;
-      }
-      aside > div {
-        position: static !important;
-        transform: none !important;
-        margin-right: auto;
-        width: auto !important;
-        height: auto !important;
-        flex-direction: row !important;
-        border-radius: 24px !important;
-      }
-      .other-links {
-        position: static !important;
-        width: auto !important;
-        height: auto !important;
-        margin-left: auto !important;
-        flex-direction: row !important;
-        background: #fff !important;
-        border-radius: 24px !important;
-      }
-      .profile-widget,
-      .main-container {
-        margin-left: 0 !important;
-        width: 100% !important;
-      }
-      .main-container {
-        flex-direction: column !important;
-        padding: 0 16px;
+    @layer utilities {
+      .before-notification::before {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        right: 4px;
+        top: 2px;
+        background: #E10E0E;
+        border: 2px solid #FFF;
+        border-radius: 50%;
+        z-index: 10;
       }
     }
   </style>
+</head>
+<body class="font-sans bg-gradient-to-r from-white to-[#FFEBE7] min-h-screen text-black">
+  <!-- 
+    Remove the Orderific Logo from the header-left;
+    only keep the page title here.
+  -->
+  <header class="sticky top-0 ml-24 z-[900] py-6 px-4 flex justify-between items-center bg-gradient-to-r from-white to-[#FFEBE7] max-[480px]:static max-[480px]:ml-0">
+    <div class="header-left flex items-center gap-2">
+      <h1 class="title font-bold text-[32px] tracking-[-0.03em]">Order Status</h1>
+    </div>
+    <div class="fullscreen-frame flex items-center pl-3 pr-4 py-2 gap-1 w-[124px] h-12 border border-black/10 rounded-full cursor-pointer">
+      <div class="fullscreen-icon w-5 h-5 pr-1">
+        <svg
+          width="10"
+          height="10"
+          viewBox="0 0 10 10"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0 10V5H1.5V8.5H5V10H0ZM8.5 5V1.5H5V0H10V5H8.5Z"
+            fill="black"
+          />
+        </svg>
+      </div>
+      <p class="fullscreen-text font-bold text-[14px] text-black whitespace-nowrap">FullScreen</p>
+    </div>
+  </header>
+
+  <!-- Left Sidebar / Bottom Navigation (responsive) -->
+  <aside class="navigation-v2 fixed top-0 left-0 w-24 h-screen p-4 flex flex-col gap-4 z-[999] max-[480px]:static max-[480px]:w-full max-[480px]:h-auto max-[480px]:p-2 max-[480px]:flex-row max-[480px]:items-center max-[480px]:justify-between max-[480px]:bg-white">
+    <!-- Logo now lives at the top of the nav -->
+    <div class="logo-frame flex items-center justify-center py-2 max-[480px]:order-1 max-[480px]:mr-auto">
+      <img class="orderific-logo w-10 h-10 object-cover" src="orderific.png" alt="Orderific Logo" />
+    </div>
+
+    <div class="main-menu-v2 flex flex-col items-center gap-2 bg-black rounded-[48px] p-2 mt-2 flex-shrink-0 max-[480px]:fixed max-[480px]:bottom-4 max-[480px]:left-1/2 max-[480px]:-translate-x-1/2 max-[480px]:flex-row max-[480px]:justify-around max-[480px]:items-center max-[480px]:py-[8px] max-[480px]:px-[10px]">
+      <div class="menu-item flex justify-center items-center w-12 h-12 bg-white/20 rounded-full transition-colors duration-300 ease hover:bg-white/40 max-[480px]:bg-transparent">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M7.20835 9.79195H12.7916V8.70866H7.20835V9.79195ZM7.20835 6.79195H12.7916V5.70866H7.20835V6.79195ZM15.5464 16.5259L12.8695 13.0087C12.6798 12.7542 12.4449 12.5572 12.1649 12.4178C11.8849 12.2784 11.5799 12.2087 11.25 12.2087H4.41669V3.75674C4.41669 3.38163 4.54628 3.06456 4.80548 2.80553C5.06467 2.54651 5.38194 2.41699 5.75727 2.41699H14.2495C14.6248 2.41699 14.941 2.54651 15.1979 2.80553C15.4548 3.06456 15.5833 3.38163 15.5833 3.75674V16.2439C15.5833 16.2939 15.582 16.3429 15.5793 16.3911C15.5766 16.4393 15.5657 16.4843 15.5464 16.5259ZM5.75644 17.5836C5.38133 17.5836 5.06426 17.4541 4.80523 17.1951C4.5462 16.936 4.41669 16.619 4.41669 16.2439V13.292H11.25C11.3932 13.292 11.5337 13.3229 11.6715 13.3849C11.8093 13.4469 11.9261 13.5412 12.022 13.6679L14.8798 17.4243C14.7943 17.4707 14.6955 17.5088 14.5835 17.5387C14.4714 17.5687 14.3581 17.5836 14.2436 17.5836H5.75644Z"
+            fill="white"
+          />
+        </svg>
+      </div>
+      <div class="menu-item flex justify-center items-center w-12 h-12 bg-white/20 rounded-full transition-colors duration-300 ease hover:bg-white/40 max-[480px]:bg-transparent">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5.30451 15.5909L6.49041 13.1134C6.57481 12.9157 6.70862 12.7653 6.89185 12.6622C7.07507 12.5591 7.26978 12.5076 7.47597 12.5076H9.45837V8.67904C7.51499 8.62563 5.88626 8.39566 4.57216 7.98915C3.25806 7.58263 2.60101 7.08611 2.60101 6.49958C2.60101 5.84894 3.31735 5.32437 4.75003 4.92587C6.18273 4.52737 7.93272 4.32812 10 4.32812C12.062 4.32812 13.8106 4.52737 15.246 4.92587C16.6813 5.32437 17.399 5.84894 17.399 6.49958C17.399 7.09146 16.7372 7.58932 15.4134 7.99317C14.0897 8.397 12.4658 8.62563 10.5417 8.67904V12.5076H12.5241C12.7356 12.5076 12.9316 12.5591 13.1122 12.6622C13.2927 12.7653 13.4252 12.9157 13.5096 13.1134L14.6955 15.5909H13.5962L12.5962 13.5909H7.40385L6.40385 15.5909H5.30451Z"
+            fill="white"
+          />
+        </svg>
+      </div>
+      <div class="menu-item flex justify-center items-center w-12 h-12 bg-white/20 rounded-full transition-colors duration-300 ease hover:bg-white/40 max-[480px]:bg-transparent">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5.30451 15.5909L6.49041 13.1134C6.57481 12.9157 6.70862 12.7653 6.89185 12.6622C7.07507 12.5591 7.26978 12.5076 7.47597 12.5076H9.45837V8.67904C7.51499 8.62563 5.88626 8.39566 4.57216 7.98915C3.25806 7.58263 2.60101 7.08611 2.60101 6.49958C2.60101 5.84894 3.31735 5.32437 4.75003 4.92587C6.18273 4.52737 7.93272 4.32812 10 4.32812C12.062 4.32812 13.8106 4.52737 15.246 4.92587C16.6813 5.32437 17.399 5.84894 17.399 6.49958C17.399 7.09146 16.7372 7.58932 15.4134 7.99317C14.0897 8.397 12.4658 8.62563 10.5417 8.67904V12.5076H12.5241C12.7356 12.5076 12.9316 12.5591 13.1122 12.6622C13.2927 12.7653 13.4252 12.9157 13.5096 13.1134L14.6955 15.5909H13.5962L12.5962 13.5909H7.40385L6.40385 15.5909H5.30451Z"
+            fill="white"
+          />
+        </svg>
+      </div>
+      <div class="menu-item active flex justify-center items-center w-12 h-12 bg-[#FF5634] rounded-full transition-colors duration-300 ease hover:bg-white/40 max-[480px]:bg-transparent">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5.30451 15.5909L6.49041 13.1134C6.57481 12.9157 6.70862 12.7653 6.89185 12.6622C7.07507 12.5591 7.26978 12.5076 7.47597 12.5076H9.45837V8.67904C7.51499 8.62563 5.88626 8.39566 4.57216 7.98915C3.25806 7.58263 2.60101 7.08611 2.60101 6.49958C2.60101 5.84894 3.31735 5.32437 4.75003 4.92587C6.18273 4.52737 7.93272 4.32812 10 4.32812C12.062 4.32812 13.8106 4.52737 15.246 4.92587C16.6813 5.32437 17.399 5.84894 17.399 6.49958C17.399 7.09146 16.7372 7.58932 15.4134 7.99317C14.0897 8.397 12.4658 8.62563 10.5417 8.67904V12.5076H12.5241C12.7356 12.5076 12.9316 12.5591 13.1122 12.6622C13.2927 12.7653 13.4252 12.9157 13.5096 13.1134L14.6955 15.5909H13.5962L12.5962 13.5909H7.40385L6.40385 15.5909H5.30451Z"
+            fill="white"
+          />
+        </svg>
+      </div>
+      <div class="menu-item flex justify-center items-center w-12 h-12 bg-white/20 rounded-full transition-colors duration-300 ease hover:bg-white/40 max-[480px]:bg-transparent">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5.30451 15.5909L6.49041 13.1134C6.57481 12.9157 6.70862 12.7653 6.89185 12.6622C7.07507 12.5591 7.26978 12.5076 7.47597 12.5076H9.45837V8.67904C7.51499 8.62563 5.88626 8.39566 4.57216 7.98915C3.25806 7.58263 2.60101 7.08611 2.60101 6.49958C2.60101 5.84894 3.31735 5.32437 4.75003 4.92587C6.18273 4.52737 7.93272 4.32812 10 4.32812C12.062 4.32812 13.8106 4.52737 15.246 4.92587C16.6813 5.32437 17.399 5.84894 17.399 6.49958C17.399 7.09146 16.7372 7.58932 15.4134 7.99317C14.0897 8.397 12.4658 8.62563 10.5417 8.67904V12.5076H12.5241C12.7356 12.5076 12.9316 12.5591 13.1122 12.6622C13.2927 12.7653 13.4252 12.9157 13.5096 13.1134L14.6955 15.5909H13.5962L12.5962 13.5909H7.40385L6.40385 15.5909H5.30451Z"
+            fill="white"
+          />
+        </svg>
+      </div>
+      <div class="menu-item flex justify-center items-center w-12 h-12 bg-white/20 rounded-full transition-colors duration-300 ease hover:bg-white/40 max-[480px]:bg-transparent">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 14V7.75C12 7.5375 12.0719 7.35938 12.2156 7.21562C12.3594 7.07187 12.5375 7 12.75 7H18.25C18.4625 7 18.6406 7.07187 18.7844 7.21562C18.9281 7.35938 19 7.5375 19 7.75V11.75C19 11.9625 18.9281 12.1406 18.7844 12.2844C18.6406 12.4281 18.4625 12.5 18.25 12.5H13.5L12 14ZM5.5 19C5.0875 19 4.73437 18.8531 4.44062 18.5594C4.14687 18.2656 4 17.9125 4 17.5V2.5C4 2.0875 4.14687 1.73438 4.44062 1.44063C4.73437 1.14688 5.0875 1 5.5 1H14.5C14.9125 1 15.2656 1.14688 15.5594 1.44063C15.8531 1.73438 16 2.0875 16 2.5V6H14.5V5H5.5V15H14.5V14H16V17.5C16 17.9125 15.8531 18.2656 15.5594 18.5594C15.2656 18.8531 14.9125 19 14.5 19H5.5Z"
+            fill="white"
+          />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Profile & Notification (desktop only) -->
+    <div class="other-links mt-auto flex flex-col items-start gap-2 bg-white rounded-[48px] p-2 max-[480px]:order-2 max-[480px]:ml-auto max-[480px]:flex-row max-[480px]:items-center max-[480px]:gap-2">
+      <div class="profile-frame w-12 h-12 bg-[url('profile.png')] bg-center bg-cover rounded-full"></div>
+      <div class="notification-frame before-notification relative w-12 h-12 bg-black/10 rounded-full text-center pt-[10px]"></div>
+    </div>
+  </aside>
+
+  <!-- McDonald’s Panel + Time -->
+  <div class="profile-widget flex justify-between items-center ml-24 py-3 px-6 gap-4 bg-[rgba(0,0,0,0.05)] rounded-[16px] mb-5 max-[480px]:ml-0 max-[480px]:w-full max-[480px]:rounded-none">
+    <div class="mcdonald-section flex items-center gap-4">
+      <img class="image2 w-[60px] h-[60px] rounded-[16px] object-cover" src="mcdonalds.png" alt="McDonald’s Photo" />
+      <div class="mcdonald-text-frame">
+        <p class="m-0 text-[20px] font-medium">McDonald’s</p>
+      </div>
+    </div>
+    <p class="time-display font-bold text-[2rem] text-black">15:03</p>
+  </div>
+
+  <!-- Main Container (Preparing + Ready) -->
+  <div class="main-container flex gap-6 flex-wrap ml-24 max-[480px]:flex-nowrap max-[480px]:justify-between max-[480px]:ml-0 max-[480px]:w-full">
+    <!-- Preparing Section -->
+    <div class="preparing-frame flex-[2_1_600px] min-w-[300px] flex flex-col gap-6 p-8 bg-white rounded-[24px] max-[480px]:w-1/2 max-[480px]:min-w-0 max-[480px]:mb-0">
+      <p class="preparing-title text-center text-[32px] font-bold mx-auto">Preparing</p>
+      <div class="preparing-orders flex flex-wrap justify-center gap-2 w-[715px] max-w-full mx-auto max-[480px]:w-full max-[480px]:max-w-full">
+        <div class="order-num flex justify-center items-center py-2 px-6 gap-2 w-[106px] h-[64px] bg-black/10 rounded-[16px]">
+          <p class="order-number text-[24px] font-bold">3885</p>
+        </div>
+        <div class="order-num flex justify-center items-center py-2 px-6 gap-2 w-[106px] h-[64px] bg-black/10 rounded-[16px]">
+          <p class="order-number text-[24px] font-bold">3885</p>
+        </div>
+        <div class="order-num flex justify-center items-center py-2 px-6 gap-2 w-[106px] h-[64px] bg-black/10 rounded-[16px]">
+          <p class="order-number text-[24px] font-bold">3885</p>
+        </div>
+        <div class="order-num flex justify-center items-center py-2 px-6 gap-2 w-[106px] h-[64px] bg-black/10 rounded-[16px]">
+          <p class="order-number text-[24px] font-bold">3885</p>
+        </div>
+        <div class="order-num flex justify-center items-center py-2 px-6 gap-2 w-[106px] h-[64px] bg-black/10 rounded-[16px]">
+          <p class="order-number text-[24px] font-bold">3885</p>
+        </div>
+        <div class="order-num flex justify-center items-center py-2 px-6 gap-2 w-[106px] h-[64px] bg-black/10 rounded-[16px]">
+          <p class="order-number text-[24px] font-bold">3885</p>
+        </div>
+        <div class="order-num flex justify-center items-center py-2 px-6 gap-2 w-[106px] h-[64px] bg-black/10 rounded-[16px]">
+          <p class="order-number text-[24px] font-bold">3885</p>
+        </div>
+        <div class="order-num flex justify-center items-center py-2 px-6 gap-2 w-[106px] h-[64px] bg-black/10 rounded-[16px]">
+          <p class="order-number text-[24px] font-bold">3885</p>
+        </div>
+        <div class="order-num flex justify-center items-center py-2 px-6 gap-2 w-[106px] h-[64px] bg-black/10 rounded-[16px]">
+          <p class="order-number text-[24px] font-bold">3885</p>
+        </div>
+        <div class="order-num flex justify-center items-center py-2 px-6 gap-2 w-[106px] h-[64px] bg-black/10 rounded-[16px]">
+          <p class="order-number text-[24px] font-bold">3885</p>
+        </div>
+        <div class="order-num flex justify-center items-center py-2 px-6 gap-2 w-[106px] h-[64px] bg-black/10 rounded-[16px]">
+          <p class="order-number text-[24px] font-bold">3885</p>
+        </div>
+        <div class="order-num flex justify-center items-center py-2 px-6 gap-2 w-[106px] h-[64px] bg-black/10 rounded-[16px]">
+          <p class="order-number text-[24px] font-bold">3885</p>
+        </div>
+        <div class="order-num flex justify-center items-center py-2 px-6 gap-2 w-[106px] h-[64px] bg-black/10 rounded-[16px]">
+          <p class="order-number text-[24px] font-bold">3885</p>
+        </div>
+        <div class="order-num flex justify-center items-center py-2 px-6 gap-2 w-[106px] h-[64px] bg-black/10 rounded-[16px]">
+          <p class="order-number text-[24px] font-bold">3885</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ready Section -->
+    <div class="ready-frame flex-[1_1_300px] min-w-[250px] flex flex-col gap-6 p-8 bg-white rounded-[24px] max-[480px]:w-1/2 max-[480px]:min-w-0 max-[480px]:mb-0">
+      <p class="ready-title text-center text-[32px] font-bold mx-auto">Ready</p>
+      <div class="ready-orders flex flex-wrap gap-2 w-[335px] max-w-full mx-auto max-[480px]:w-full max-[480px]:max-w-full">
+        <div class="ready-big flex justify-center items-center w-[335px] h-[128px] bg-[#119717] rounded-[16px]">
+          <p class="ready-order-number font-bold text-[32px] text-white">3885</p>
+        </div>
+        <div class="ready-small flex justify-center items-center w-[106px] h-[64px] bg-[#119717] rounded-[16px]">
+          <p class="ready-order-number font-bold text-[32px] text-white">3885</p>
+        </div>
+        <div class="ready-small flex justify-center items-center w-[106px] h-[64px] bg-[#119717] rounded-[16px]">
+          <p class="ready-order-number font-bold text-[32px] text-white">3885</p>
+        </div>
+        <div class="ready-small flex justify-center items-center w-[106px] h-[64px] bg-[#119717] rounded-[16px]">
+          <p class="ready-order-number font-bold text-[32px] text-white">3885</p>
+        </div>
+        <div class="ready-small flex justify-center items-center w-[106px] h-[64px] bg-[#119717] rounded-[16px]">
+          <p class="ready-order-number font-bold text-[32px] text-white">3885</p>
+        </div>
+        <div class="ready-small flex justify-center items-center w-[106px] h-[64px] bg-[#119717] rounded-[16px]">
+          <p class="ready-order-number font-bold text-[32px] text-white">3885</p>
+        </div>
+        <div class="ready-small flex justify-center items-center w-[106px] h-[64px] bg-[#119717] rounded-[16px]">
+          <p class="ready-order-number font-bold text-[32px] text-white">3885</p>
+        </div>
+        <div class="ready-small flex justify-center items-center w-[106px] h-[64px] bg-[#119717] rounded-[16px]">
+          <p class="ready-order-number font-bold text-[32px] text-white">3885</p>
+        </div>
+        <div class="ready-small flex justify-center items-center w-[106px] h-[64px] bg-[#119717] rounded-[16px]">
+          <p class="ready-order-number font-bold text-[32px] text-white">3885</p>
+        </div>
+        <div class="ready-small flex justify-center items-center w-[106px] h-[64px] bg-[#119717] rounded-[16px]">
+          <p class="ready-order-number font-bold text-[32px] text-white">3885</p>
+        </div>
+        <div class="ready-small flex justify-center items-center w-[106px] h-[64px] bg-[#119717] rounded-[16px]">
+          <p class="ready-order-number font-bold text-[32px] text-white">3885</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

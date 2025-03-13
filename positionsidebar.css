@@ -1,429 +1,380 @@
 /* ======================
-   GLOBAL & BODY
+   RESET & BASE
 ====================== */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: linear-gradient(to right, #FFFFFF, #FFEBE7);
-    min-height: 100vh;
-  }
-  
-  /* ======================
-     STICKY HEADER
-  ====================== */
-  .header {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: linear-gradient(to right, #FFFFFF, #FFEBE7);
+  min-height: 100vh;
+  color: #000;
+}
+
+/* ======================
+   NAVIGATION (DESKTOP)
+====================== */
+.navigation-v2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 96px;
+  height: 100vh;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 999;
+}
+.logo-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 0;
+}
+.orderific-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+.main-menu-v2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background: #000;
+  border-radius: 48px;
+  padding: 8px;
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+.menu-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
+  transition: background 0.3s ease;
+}
+.menu-item:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+.menu-item.active {
+  background: #FF5634;
+}
+.other-links {
+  margin-top: auto; /* push to bottom on desktop */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  background: #FFFFFF;
+  border-radius: 48px;
+  padding: 8px;
+}
+.profile-frame {
+  width: 48px;
+  height: 48px;
+  background: url('profile.png') no-repeat center/cover;
+  border-radius: 48px;
+}
+.notification-frame {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 48px;
+  text-align: center;
+  padding-top: 10px;
+}
+.notification-frame::before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  right: 4px;
+  top: 2px;
+  background: #E10E0E;
+  border: 2px solid #FFF;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  margin-left: 96px; /* offset for sidebar */
+  z-index: 900;
+  padding: 24px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #FFFFFF, #FFEBE7);
+}
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.title {
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: -0.03em;
+}
+.fullscreen-frame {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px 8px 12px;
+  gap: 4px;
+  width: 124px;
+  height: 48px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 48px;
+  cursor: pointer;
+}
+.fullscreen-icon {
+  width: 20px;
+  height: 20px;
+  padding-right: 4px;
+}
+.fullscreen-text {
+  font-weight: 700;
+  font-size: 14px;
+  color: #000;
+  white-space: nowrap;
+}
+
+/* ======================
+   MCDONALD’S PANEL
+====================== */
+.profile-widget {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 96px;
+  padding: 12px 24px;
+  gap: 16px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+.mcdonald-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.image2 {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+.mcdonald-text-frame p {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+}
+.time-display {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #000;
+}
+
+/* ======================
+   MAIN CONTAINER
+====================== */
+.main-container {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-left: 96px; /* same offset as header */
+}
+
+/* PREPARING FRAME */
+.preparing-frame {
+  flex: 2 1 600px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px;
+  background: #FFF;
+  border-radius: 24px;
+}
+.preparing-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 auto;
+}
+.preparing-orders {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  width: 715px; /* 5 columns × 106px + small gap */
+  max-width: 100%;
+  margin: 0 auto;
+}
+.order-num {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px;
+  gap: 8px;
+  width: 106px;
+  height: 64px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+}
+.order-number {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* READY FRAME */
+.ready-frame {
+  flex: 1 1 300px;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px;
+  background: #FFF;
+  border-radius: 24px;
+}
+.ready-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 auto;
+}
+.ready-orders {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 335px; 
+  max-width: 100%;
+  margin: 0 auto;
+}
+.ready-big {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 335px;
+  height: 128px;
+  background: #119717;
+  border-radius: 16px;
+}
+.ready-small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 106px;
+  height: 64px;
+  background: #119717;
+  border-radius: 16px;
+}
+.ready-order-number {
+  font-weight: 700;
+  font-size: 32px;
+  color: #FFF;
+}
+
+/* ======================
+   MOBILE OVERRIDES
+====================== */
+@media (max-width: 480px) {
+ 
+  .main-container {
     display: flex;
+    flex-wrap: nowrap;
     justify-content: space-between;
-    align-items: center;
-    padding: 24px 16px;
-    gap: 20px;
-    isolation: isolate;
-  
-    position: sticky;
-    top: 0;
-    z-index: 999;
-  
+    margin-left: 0; /* remove any left offset if present */
     width: 100%;
-    height: 96px;
-    background: linear-gradient(to right, #FFFFFF, #FFEBE7);
   }
-  .header-left {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .orderific-logo {
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-  }
-  .title {
-    white-space: nowrap;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 40px;
-    padding-left: 16px;
-    letter-spacing: -0.03em;
-    color: #000;
-    /* optional fixed dimension
-    width: 181px;
-    height: 40px; */
-  }
-  
-  /* Full Screen Button */
-  .fullscreen-frame {
+  .navigation-v2 {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 8px 16px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 8px 16px 8px 12px;
-    gap: 4px;
-  
-    margin-left: auto;
-    width: 124px;
-    height: 48px;
-  
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 48px;
-    z-index: 1;
+    justify-content: space-between;
+    background: #fff;
   }
-  .fullscreen-icon {
-    width: 20px;
-    height: 20px;
-    padding-right: 4px;
+  /* Profile & notification in one row */
+  .other-links {
+    order: 2;              /* Profile & notification on the right */
+    margin-left: auto;     /* Keep them pinned to the right */
+    flex-direction: row;   /* Side-by-side, not stacked */
+    align-items: center;
+    gap: 8px;
+  }
+  /* Move the logo to the right side */
+  .logo-frame {
+    order: 1;
+    margin-right: auto;
+  }
+
+  /* 2) .main-menu-v2 goes to the bottom, horizontal, black bar */
+  .main-menu-v2 {
+    position: fixed;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%); 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background: #000;
+    /* 10px left/right padding, slight top/bottom padding */
+    padding: 8px 10px;
+    /* Rounded corners */
+    border-radius: 24px;
+    z-index: 9999;
+    width: auto; /* let the bar shrink to its contents */
+  }
+  .menu-item {
+    width: 48px;
+    height: 48px;
+    background: transparent;
+    border-radius: 50%;
+  }
+
+ 
+  .header {
+    position: static;
+    margin-left: 0;
+  }
+  /* Also make the profile-widget full width if desired */
+  .profile-widget {
+    margin-left: 0;
+    width: 100%;
     border-radius: 0;
   }
-  .fullscreen-text {
-    width: 72px;
-    height: 16px;
-    font-family: 'DM Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-    color: #000000;
-    white-space: nowrap;
-  }
-  
-  /* ======================
-     LEFT SIDEBAR
-  ====================== */
-  .navigation-v2 {
-    position: fixed;
-    left: 0;
-    top: 100px; /* below sticky header */
-    width: 96px;
-    height: 650px;
-    display: flex;
-    flex-direction: column;
-    padding: 16px;
-    gap: 221px;
-    isolation: isolate;
-    z-index: 1;
-  }
-  .main-menu-v2 {
-    position: absolute;
-    width: 64px;
-    height: 344px;
-    left: 16px;
-    top: 50%;
-    transform: translateY(-80%);
-  
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 8px;
-    gap: 8px;
-    background: #000;
-    border-radius: 48px;
-    z-index: 2;
-  }
-  /* 6 circles, 4th is active (orange) */
-  .menu-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 48px;
-    height: 48px;
-    background: rgba(255,255,255,0.2);
-    border-radius: 24px;
-    /* Override the left padding: */
-    padding-left: 0 !important; 
-  }
-  .menu-item.active {
-    background: #FF5634;
-    padding-left: 14px;
-  }
-  
-  /* Profile + Notification pinned at bottom */
-  .other-links {
-    position: absolute;
-    bottom: 16px;
-    left: 16px;
-    width: 64px;
-    height: 120px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 8px;
-    gap: 8px;
-    background: #FFFFFF;
-    border-radius: 48px;
-    z-index: 1;
-  }
-  .profile-frame {
-    width: 48px;
-    height: 48px;
-    background: url('profile.png') no-repeat center/cover;
-    border-radius: 48px;
-  }
-  .notification-frame {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 48px;
-    height: 48px;
-    background: rgba(0,0,0,0.1);
-    border-radius: 48px;
-    /* Remove extra padding if present: */
-    padding-left: 0 !important; 
-  }
-  .notification-frame::before {
-    content: '';
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    right: 4px;
-    top: 2px;
-    background: #E10E0E;
-    border: 2px solid #FFF;
-    border-radius: 31px;
-    z-index: 1;
-  }
-  
-  /* ======================
-     MCDONALD’S PANEL
-  ====================== */
-  .profile-widget {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 24px;
-    gap: 16px;
-    width: calc(100% - 96px);
-    background: rgba(0,0,0,0.05);
-    border-radius: 16px;
-    margin-top: 0px; 
-    margin-left: 96px; /* accommodate sidebar */
-    margin-bottom: 20px;
-  }
-  .mcdonald-section {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
-  .image2 {
-    width: 60px;
-    height: 60px;
-    border-radius: 16px;
-    object-fit: cover;
-  }
-  .mcdonald-text-frame p {
-    margin: 0;
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: -0.01em;
-  }
-  .time-display {
-    font-weight: 700;
-    font-size: 2rem;
-    color: #000;
-  }
-  
-  /* ======================
-     MAIN CONTAINER
-  ====================== */
-  .main-container {
-    display: flex;
-    gap: 24px;
-    flex-wrap: wrap;
-    width: calc(100% - 96px);
-    margin-left: 96px;
-  }
-  
-  /* PREPARING FRAME */
-  .preparing-frame {
-    flex: 2 1 600px;
-    min-width: 300px;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    padding: 32px;
-    background: #FFF;
-    border-radius: 24px;
-  }
-  .preparing-title {
-    text-align: center;
-    font-size: 32px;
-    font-weight: 700;
-    color: #000;
-    margin: 0 auto;
-  }
-  .preparing-orders {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    align-content: center;
-    gap: 8px;
-    width: 715px;
-    height: 208px;
-    margin: 0 auto;
-  }
-  .order-num {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 24px;
-    gap: 8px;
-    width: 106px;
-    height: 64px;
-    background: rgba(0,0,0,0.1);
-    border-radius: 16px;
-  }
-  .order-number {
-    font-size: 24px;
-    font-weight: 700;
-    color: #000;
-  }
-  
-  /* READY FRAME */
+  .preparing-frame,
   .ready-frame {
-    flex: 1 1 300px;
-    min-width: 250px;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    padding: 32px;
-    background: #FFF;
-    border-radius: 24px;
+    width: 50% !important;
+    min-width: 0 !important;   /* remove any forced 300px/250px, etc. */
+    margin-bottom: 0;
+    /* Optionally reduce padding if content is too wide:
+       padding: 16px !important; 
+    */
   }
-  .ready-title {
-    text-align: center;
-    font-size: 32px;
-    font-weight: 700;
-    color: #000;
-    margin: 0 auto;
-  }
+
+  /* Ensure their internal “orders” don’t force extra width */
+  .preparing-orders,
   .ready-orders {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    align-content: flex-start;
-    gap: 8px;
-    width: 335px; 
-    height: 488px;
-    margin: 0 auto;
+    width: 100% !important;
+    max-width: 100% !important;
   }
-  .ready-big {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 24px;
-    gap: 8px;
-    width: 335px;
-    height: 128px;
-    background: #119717;
-    border-radius: 16px;
-  }
-  .ready-small {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 24px;
-    gap: 8px;
-    width: 106px;
-    height: 64px;
-    background: #119717;
-    border-radius: 16px;
-  }
-  .ready-big .ready-order-number {
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: -0.03em;
-    width: auto;
-    height: auto;
-  }
-  .ready-small .ready-order-number {
-    font-size: 22px;
-    line-height: 40px;
-    letter-spacing: -0.03em;
-    width: auto;
-    height: auto;
-  }
-  .ready-order-number {
-    width: 77px;
-    height: 40px;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: -0.03em;
-    color: #FFF;
-  }
-  
-  /* ======================
-     RESPONSIVE BREAKPOINT
-  ====================== */
-  @media (max-width: 768px) {
-    /* 1) Sidebar becomes horizontal at the bottom or hides entirely */
-    .navigation-v2 {
-      position: static;
-      width: 100%;
-      height: auto;
-      flex-direction: row;
-      align-items: center;
-      padding: 8px;
-      gap: 8px;
-      margin-bottom: 16px; /* spacing below if needed */
-      background: transparent; /* or #fff if you want a bar */
-    }
-    .main-menu-v2 {
-      position: static;
-      transform: none;
-      width: auto;
-      height: auto;
-      flex-direction: row;
-      border-radius: 24px;
-      margin-right: auto;
-      
-    }
-    .menu-item {
-      margin: 0 4px;
-      padding-left: 0;
-    }
-    .other-links {
-      position: static;
-      width: auto;
-      height: auto;
-      margin-left: auto;
-      display: flex;
-      flex-direction: row;
-      background: #FFFFFF;
-      border-radius: 24px;
-    }
-    .profile-frame,
-    .notification-frame {
-      margin: 0 8px;
-    }
-  
-    /* 2) Stack the main container columns */
-    .main-container {
-      margin-left: 0;
-      width: 100%;
-      flex-direction: column;
-      padding: 0 16px; /* side padding if you want */
-    }
-    .profile-widget {
-      margin-left: 0;
-      width: 100%;
-    }
-  
-    /* 3) Let orders auto-size */
-    .preparing-orders,
-    .ready-orders {
-      width: auto;
-      height: auto;
-      margin: 0 auto;
-    }
-    /* Adjust the frames if needed */
-    .preparing-frame,
-    .ready-frame {
-      width: 100%;
-      margin-bottom: 16px;
-    }
-  }
-  
+}
+
+
+
