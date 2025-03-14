@@ -690,6 +690,9 @@
   .w-24 {
     width: calc(var(--spacing) * 24);
   }
+  .w-1200 {
+    width: calc(var(--spacing) * 1200);
+  }
   .w-\[38px\] {
     width: 38px;
   }
@@ -1865,6 +1868,12 @@
   }
   .pt-\[10px\] {
     padding-top: 10px;
+  }
+  .pt-\[20px\] {
+    padding-top: 20px;
+  }
+  .pt-\[200px\] {
+    padding-top: 200px;
   }
   .pr-1 {
     padding-right: calc(var(--spacing) * 1);
