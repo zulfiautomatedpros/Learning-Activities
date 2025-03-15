@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orderific Pricing</title>
+    <link href="./output.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="font-[Poppins] bg-white overflow-x-hidden">
+    <!-- HEADER -->
+    <header class="absolute w-[1440px] h-[118px] left-[calc(50%-720px)] top-0">
+      <!-- Background Rectangle (Rectangle 684) -->
+      <div class="absolute inset-x-0 top-0 bottom-[94.75%] bg-white shadow-[0px_3px_12px_rgba(18,18,18,0.06)]"></div>
+      
+      <!-- Logo in Header -->
+      <div
+        class="absolute left-[109px] top-[35px] w-[209px] h-[47.71px] bg-no-repeat bg-contain"
+        style="background-image: url('orderific1.png');"
+      ></div>
+      
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:block">
+        <div class="relative">
+          <div class="absolute left-[417px] top-[50px] w-[46px] h-[18px] font-metropolis font-medium text-[16px] leading-[18px] text-[#121212]">
+            Home
+          </div>
+          <div class="absolute left-[489px] top-[50px] w-[68px] h-[18px] font-metropolis font-medium text-[16px] leading-[18px] text-[#121212]">
+            Features
+          </div>
+          <div class="absolute left-[563px] top-[54px] w-[10.59px] h-[10.59px]">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="1.51284" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+          <div class="absolute left-[600px] top-[50px] w-[53px] h-[18px] font-metropolis font-medium text-[16px] leading-[18px] text-[#121212]">
+            Pricing
+          </div>
+          <div class="absolute left-[679px] top-[50px] w-[73px] h-[18px] font-metropolis font-medium text-[16px] leading-[18px] text-[#121212]">
+            About Us
+          </div>
+          <div class="absolute left-[778px] top-[50px] w-[36px] h-[18px] font-metropolis font-medium text-[16px] leading-[18px] text-[#121212]">
+            Blog
+          </div>
+          <div class="absolute left-[840px] top-[50px] w-[61px] h-[18px] font-metropolis font-medium text-[16px] leading-[18px] text-[#121212]">
+            Contact
+          </div>
+        </div>
+      </nav>
+      
+      <!-- Desktop Flag Icon -->
+      <div class="hidden md:block absolute left-[980px] top-[49px] w-[32px] h-[24px] rounded-[2px]">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- SVG content here -->
+        </svg>
+      </div>
+      
+      <!-- Desktop Buttons Container -->
+      <div class="hidden md:flex absolute right-[110px] top-1/2 transform -translate-y-1/2 items-center space-x-[18px] w-[294px] h-[54px]">
+        <button class="flex items-center justify-center px-[24px] py-[18px] w-[91px] h-[54px] bg-white border border-[#EDEDED] shadow-[0px_2px_6px_rgba(16,16,16,0.04)] rounded-[12px] font-metropolis font-medium text-[16px] leading-[18px] text-[#121212]">
+          Login
+        </button>
+        <button class="flex items-center justify-center px-[24px] py-[18px] w-[185px] h-[54px] bg-[#FF5634] rounded-[12px] font-metropolis font-bold text-[16px] leading-[18px] text-white">
+          Start For Free
+        </button>
+      </div>
+      
+      <!-- Mobile Header (Only Logo and Menu Icon) -->
+      <div class="md:hidden flex items-center justify-between px-4 absolute inset-x-0 top-0 h-full">
+        <div class="w-[209px] h-[47.71px] bg-no-repeat bg-contain" style="background-image: url('Logo-Orange-Black-2.png');"></div>
+        <button aria-label="Open Menu">
+          <svg class="w-6 h-6" fill="none" stroke="#121212" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Free Plan Section -->
+    <div class="absolute w-[701.35px] h-[608px] left-[110px] top-[238px] flex flex-col items-start gap-[48px] p-0 ml-10 mt-0">
+      <section class="max-w-[701.35px] mx-auto mt-0 flex flex-col gap-[48px]">
+        <!-- Free Plan Heading & Description -->
+        <div class="flex flex-col gap-[12px]">
+          <h1 class="font-metropolis font-bold text-[62px] leading-[72px] text-[#121212]">
+            Free Plan
+          </h1>
+          <p class="font-metropolis font-normal text-[18px] leading-[30px] text-[#3F3F3F]">
+            Feugiat elit imperdiet enim pellentesque nibh bibendum lacinia pulvinar justo cursus ultricies adipiscing risus porta scelerisque at ipsum.
+          </p>
+        </div>
+        <!-- What's Included & Right Plan Section -->
+        <div class="w-[701.35px] h-auto flex flex-col items-start gap-[48px]">
+          <!-- What's Included in the Plan -->
+          <div class="w-[701.35px] h-auto flex flex-col items-start gap-[32px]">
+            <div class="w-[701.35px] h-auto flex flex-col items-start gap-[24px]">
+              <h2 class="font-metropolis font-bold text-[44px] leading-[54px] text-[#121212]">
+                What’s included in the plan?
+              </h2>
+              <p class="font-metropolis font-normal text-[18px] leading-[30px] text-[#3F3F3F]">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit lobortis arcu enim urna adipiscing praesent velit viverra sit semper lorem eu cursus vel hendrerit elementum morbi curabitur etiam nibh justo lorem aliquet donec sed sit mi dignissim at ante massa mattis.
+              </p>
+            </div>
+          </div>
+          <!-- Right Plan Section -->
+          <div class="w-[700.34px] h-auto flex flex-col items-start gap-[16px] font-bold">
+            <div>Is this the right plan for my restaurant?</div>
+            <p class="font-metropolis font-normal text-[18px] leading-[30px] text-[#3F3F3F]">
+              Vitae congue eu consequat ac felis placerat vestibulum lectus mauris ultrices cursus sit amet dictum sit amet justo donec enim diam porttitor lacus luctus accumsan tortor posuere praesent tristique magna sit amet purus gravida quis blandit turpis.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- BG Card (Pricing Card Container) -->
+    <div class="absolute w-[390px] h-[889px] left-[940px] top-[238px] bg-white border border-[#EDEDED] shadow-[0px_2px_12px_rgba(16,16,16,0.08)] rounded-[24px]">
+      <!-- Pricing Card V3 -->
+      <div class="absolute w-[327px] h-[756px] left-[30px] top-[83px] flex flex-col items-start gap-[48px]">
+        <!-- Top Section: Icon, Subtitle, Price, Paragraph, and Button -->
+        <div class="w-[327px] h-auto flex flex-col items-start gap-[32px]">
+          <div class="w-[326.67px] h-auto flex flex-col items-start gap-[16px]">
+            <div class="w-[183px] h-[72px] flex flex-row items-center gap-[16px]">
+              <div class="w-[72px] h-[72px] mt-5 rounded-[16px]">
+                <!-- Icon SVG -->
+                <svg width="67" height="52" viewBox="0 0 67 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M51.3883 25.6895H54.3983V49.7697H51.3883V25.6895ZM12.2578 25.6895H15.2678V49.7697H12.2578V25.6895Z" fill="#CFD8DC"/>
+                    <path d="M1.72266 36.2246H25.8029V39.2346H1.72266V36.2246Z" fill="#CFD8DC"/>
+                    <path d="M6.23788 47.3618L4.13086 45.2547L21.1376 28.248L23.2446 30.3551L6.23788 47.3618Z" fill="#CFD8DC"/>
+                    <path d="M23.3951 45.1042L21.2881 47.2113L4.13086 30.3551L6.23788 28.248L23.3951 45.1042ZM40.8533 36.2246H64.9336V39.2347H40.8533V36.2246Z" fill="#CFD8DC"/>
+                    <path d="M45.5191 47.3618L43.4121 45.2547L60.4188 28.248L62.5258 30.3551L45.5191 47.3618Z" fill="#CFD8DC"/>
+                    <path d="M62.525 45.1042L60.4179 47.2113L43.2607 30.3551L45.3678 28.248L62.525 45.1042Z" fill="#CFD8DC"/>
+                    <path d="M13.7629 51.2739C6.23784 51.2739 0.217773 45.2538 0.217773 37.7288C0.217773 30.2037 6.23784 24.1836 13.7629 24.1836C21.288 24.1836 27.3081 30.2037 27.3081 37.7288C27.3081 45.2538 21.288 51.2739 13.7629 51.2739ZM13.7629 27.1936C7.89336 27.1936 3.22781 31.8592 3.22781 37.7288C3.22781 43.5983 7.89336 48.2639 13.7629 48.2639C19.6325 48.2639 24.2981 43.5983 24.2981 37.7288C24.2981 31.8592 19.6325 27.1936 13.7629 27.1936ZM52.8934 51.2739C45.3683 51.2739 39.3482 45.2538 39.3482 37.7288C39.3482 30.2037 45.3683 24.1836 52.8934 24.1836C60.4185 24.1836 66.4385 30.2037 66.4385 37.7288C66.4385 45.2538 60.4185 51.2739 52.8934 51.2739ZM52.8934 27.1936C47.0238 27.1936 42.3583 31.8592 42.3583 37.7288C42.3583 43.5983 47.0238 48.2639 52.8934 48.2639C58.763 48.2639 63.4285 43.5983 63.4285 37.7288C63.4285 31.8592 58.763 27.1936 52.8934 27.1936Z" fill="#607D8B"/>
+                    <path d="M52.8946 39.2339C52.2926 39.2339 51.8411 38.9329 51.54 38.4814C42.5099 21.9262 39.4999 5.67203 39.3494 4.91953C39.1989 4.46802 39.3494 4.01652 39.8009 3.56501C40.1019 3.26401 40.5534 3.11351 41.0049 3.11351C41.0049 3.11351 46.5735 3.86601 48.53 0.705477C48.9815 -0.0470316 49.8845 -0.197534 50.637 0.253972C51.3895 0.705477 51.54 1.60849 51.0885 2.361C48.9815 5.52153 45.0685 6.12354 42.6604 6.12354C43.714 10.9396 47.025 24.0332 54.0986 36.9764C54.5501 37.7289 54.2491 38.6319 53.4966 39.0834C53.3461 39.2339 53.1956 39.2339 52.8946 39.2339Z" fill="#4CAF50"/>
+                    <path d="M31.8232 39.2345H13.7629C13.3114 39.2345 12.8599 38.9335 12.5589 38.6325C12.2579 38.181 12.2579 37.7294 12.4084 37.2779L21.4385 16.2077C21.7395 15.6057 22.191 15.3047 22.793 15.3047H43.8633C44.7663 15.3047 45.3683 15.9067 45.3683 16.8097V18.3147C45.3683 18.6157 45.2178 18.9167 45.2178 19.0672L33.1777 38.6325C32.8767 38.9335 32.2747 39.2345 31.8232 39.2345ZM16.0205 36.2244H30.9201L42.0573 18.1642H23.8466L16.0205 36.2244Z" fill="#4CAF50"/>
+                    <path d="M31.8228 39.2336C31.2208 39.2336 30.6188 38.9326 30.4683 38.3306L19.9332 11.2403C19.6321 10.4877 20.0837 9.58474 20.8362 9.28374C21.5887 8.98273 22.4917 9.43424 22.7927 10.1867L33.3278 37.2771C33.6288 38.0296 33.1773 38.9326 32.4248 39.2336C32.1238 39.2336 31.9733 39.2336 31.8228 39.2336Z" fill="#4CAF50"/>
+                    <path d="M50.7864 0.404362C50.0339 -0.047143 49.1309 0.103359 48.6794 0.855868C47.7764 2.05988 46.4219 2.66189 45.0674 2.96289L45.8199 5.82243C47.7764 5.37092 49.8834 4.46791 51.238 2.36089C51.539 1.75888 51.3885 0.855868 50.7864 0.404362Z" fill="#455A64"/>
+                    <path d="M36.3382 39.2338C36.3382 41.7923 34.3817 43.7489 31.8232 43.7489C29.2646 43.7489 27.3081 41.7923 27.3081 39.2338C27.3081 36.6753 29.2646 34.7188 31.8232 34.7188C34.3817 34.7188 36.3382 36.6753 36.3382 39.2338ZM16.773 37.7288C16.773 39.3843 15.4185 40.7388 13.763 40.7388C12.1074 40.7388 10.7529 39.3843 10.7529 37.7288C10.7529 36.0733 12.1074 34.7188 13.763 34.7188C15.4185 34.7188 16.773 36.0733 16.773 37.7288Z" fill="#317534"/>
+                    <path d="M31.8239 34.7188H13.7637V40.7388L31.8239 43.7489V34.7188Z" fill="#317534"/>
+                    <path d="M27.3087 9.13308C22.7936 9.13308 19.7836 12.1431 17.5261 12.1431C15.2686 12.1431 15.2686 9.88559 15.2686 9.88559V8.38057C15.2686 7.17656 16.3221 6.12305 17.5261 6.12305H27.3087C27.3087 6.12305 28.8137 6.12305 28.8137 7.62806C28.8137 7.62806 28.8137 9.13308 27.3087 9.13308Z" fill="#317534"/>
+                    </svg>
+                    
+              </div>
+              <div class="flex flex-col w-[95px] h-[60px]">
+                <span class="w-[47px] h-[20px] font-metropolis font-bold text-[18px] leading-[20px] text-center text-[#656565]">
+                  Free
+                </span>
+                <span class="w-[95px] h-[40px] font-metropolis font-bold text-[28px] leading-[40px] text-[#121212]">
+                  $0/mo
+                </span>
+              </div>
+            </div>
+            <p class="w-[326.67px] h-[60px] font-metropolis font-normal text-[18px] leading-[30px] text-[#656565]">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum...
+            </p>
+          </div>
+          <div class="w-[327px] h-[72px] flex flex-row items-start">
+            <button class="flex flex-row justify-center items-center w-[327px] h-[72px] px-[38px] py-[26px] gap-[6px] bg-[#FF5634] rounded-[16px]">
+              <span class="w-[100px] h-[20px] whitespace-nowrap font-metropolis font-bold text-[18px] leading-[20px] text-center text-white">
+                Get Started
+              </span>
+            </button>
+          </div>
+        </div>
+        <!-- Feature List Section -->
+        <div class="w-[314px] h-auto flex flex-col items-start gap-[24px]">
+          <span class="w-[151px] h-[20px] font-metropolis font-bold text-[18px] leading-[20px] text-[#121212]">
+            What's included
+          </span>
+          <!-- Features List -->
+          <div class="flex flex-col gap-[16px]">
+            <!-- Feature 1: Single Location (30 tables) -->
+            <div class="flex flex-row items-center gap-[14px]">
+              <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.33984 10.5228L7.43139 16.6144L22.6602 1.3855" stroke="#FF5634" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="w-[274px] h-[20px] font-metropolis font-medium text-[18px] leading-[20px] text-[#121212]">
+                Single Location (30 tables)
+              </span>
+            </div>
+            <!-- Feature 2: Mobile Order & Pay -->
+            <div class="flex flex-row items-center gap-[14px]">
+              <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.33984 10.5228L7.43139 16.6144L22.6602 1.3855" stroke="#FF5634" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="w-[274px] h-[20px] font-metropolis font-medium text-[18px] leading-[20px] text-[#121212]">
+                Mobile Order &amp; Pay
+              </span>
+            </div>
+            <!-- Feature 3: Split the Bill -->
+            <div class="flex flex-row items-center gap-[14px]">
+              <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.33984 10.5228L7.43139 16.6144L22.6602 1.3855" stroke="#FF5634" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="w-[274px] h-[20px] font-metropolis font-medium text-[18px] leading-[20px] text-[#121212]">
+                Split the Bill
+              </span>
+            </div>
+            <!-- Feature 4: Delivery & Pickup -->
+            <div class="flex flex-row items-center gap-[14px]">
+              <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.33984 10.5228L7.43139 16.6144L22.6602 1.3855" stroke="#FF5634" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="w-[274px] h-[20px] font-metropolis font-medium text-[18px] leading-[20px] text-[#121212]">
+                Delivery &amp; Pickup
+              </span>
+            </div>
+            <!-- Feature 5: Directory -->
+            <div class="flex flex-row items-center gap-[14px]">
+              <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.33984 10.5228L7.43139 16.6144L22.6602 1.3855" stroke="#FF5634" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="w-[274px] h-[20px] font-metropolis font-medium text-[18px] leading-[20px] text-[#121212]">
+                Directory
+              </span>
+            </div>
+            <!-- Feature 6: Limited Customisable -->
+            <div class="flex flex-row items-center gap-[14px]">
+              <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.33984 10.5228L7.43139 16.6144L22.6602 1.3855" stroke="#FF5634" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="w-[274px] h-[20px] font-metropolis font-medium text-[18px] leading-[20px] text-[#121212]">
+                Limited Customisable
+              </span>
+            </div>
+            <!-- Feature 7: Website Builder Basic -->
+            <div class="flex flex-row items-center gap-[14px]">
+              <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.33984 10.5228L7.43139 16.6144L22.6602 1.3855" stroke="#FF5634" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="w-[274px] h-[20px] font-metropolis font-medium text-[18px] leading-[20px] text-[#121212]">
+                Website Builder Basic
+              </span>
+            </div>
+            <!-- Feature 8: Kitchen Printer Integration -->
+            <div class="flex flex-row items-center gap-[14px]">
+              <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.33984 10.5228L7.43139 16.6144L22.6602 1.3855" stroke="#FF5634" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="w-[274px] h-[20px] font-metropolis font-medium text-[18px] leading-[20px] text-[#121212]">
+                Kitchen Printer Integration
+              </span>
+            </div>
+            <!-- Feature 9: Delivery &amp; Pickup (repeated) -->
+            <div class="flex flex-row items-center gap-[14px]">
+              <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.33984 10.5228L7.43139 16.6144L22.6602 1.3855" stroke="#FF5634" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="w-[274px] h-[20px] font-metropolis font-medium text-[18px] leading-[20px] text-[#121212]">
+                Delivery &amp; Pickup
+              </span>
+            </div>
+            <!-- Feature 10: Gratuities (Tips) -->
+            <div class="flex flex-row items-center gap-[14px]">
+              <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.33984 10.5228L7.43139 16.6144L22.6602 1.3855" stroke="#FF5634" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="w-[274px] h-[20px] font-metropolis font-medium text-[18px] leading-[20px] text-[#121212]">
+                Gratuities (Tips)
+              </span>
+            </div>
+            <!-- Feature 11: Feature #11 -->
+            <div class="flex flex-row items-center gap-[14px]">
+              <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.33984 10.5228L7.43139 16.6144L22.6602 1.3855" stroke="#FF5634" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="w-[274px] h-[20px] font-metropolis font-medium text-[18px] leading-[20px] text-[#121212]">
+                Feature #11
+              </span>
+            </div>
+            <!-- Feature 12: Feature #12 -->
+            <div class="flex flex-row items-center gap-[14px]">
+              <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.33984 10.5228L7.43139 16.6144L22.6602 1.3855" stroke="#FF5634" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="w-[274px] h-[20px] font-metropolis font-medium text-[18px] leading-[20px] text-[#121212]">
+                Feature #12
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="absolute w-[1440px] h-[919px] left-[calc(50%-720px)] top-[1327px]">
+        <svg class="w-[1440px] h-[1px]" viewBox="0 0 1440 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line y1="0.5" x2="1440" y2="0.5" stroke="#CACACA"/>
+            </svg>
+            
+    </div>
+
+    <!-- Orderific Logo at Specified Position -->
+    <div class="absolute left-[110px] top-[1405px] w-[209px] h-[47.71px]">
+      <img src="orderific1.png" alt="Orderific Logo" class="w-full h-full object-contain" />
+      <p class="absolute left-[7.62%] right-[61.12%] top-[66.24%] bottom-[31.22%] font-metropolis font-normal text-[18px] leading-[30px] mt-10 text-[#3F3F3F] whitespace-normalstyle" style="width: 400px;">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut.
+      </p>
+    </div>
+<!-- Container for both buttons -->
+<div class="absolute left-[810px] top-[1405px] w-[517px] h-[66px]">
+
+    <!-- First Button: Download for iOS -->
+    <div
+      class="absolute left-0 top-0 w-[225.95px] h-[65.15px] bg-[#FF5634] rounded-[14px] flex items-center gap-2 px-3"
+    >
+      <!-- Apple Icon (white fill) -->
+      <svg class="w-[21px] h-[18px]" viewBox="0 0 21 25" fill="white" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11.2124 2.39066C12.8086 0.286868 15.0276 0.276611 15.0276 0.276611C15.0276 0.276611 15.3577 2.25454 13.772 4.15991C12.0788 6.19443 10.1544 5.86151 10.1544 5.86151C10.1544 5.86151 9.79299 4.26144 11.2124 2.39066ZM10.3574 7.24705C11.1785 7.24705 12.7025 6.11828 14.6862 6.11828C18.1009 6.11828 19.4442 8.54801 19.4442 8.54801C19.4442 8.54801 16.8169 9.89128 16.8169 13.1507C16.8169 16.8275 20.0898 18.0947 20.0898 18.0947C20.0898 18.0947 17.8019 24.5341 14.7117 24.5341C13.2923 24.5341 12.1889 23.5777 10.6934 23.5777C9.16938 23.5777 7.65703 24.5698 6.67201 24.5698C3.85015 24.5699 0.285156 18.4614 0.285156 13.5512C0.285156 8.72021 3.30269 6.18597 6.13302 6.18597C7.97298 6.18597 9.40081 7.24705 10.3574 7.24705Z"/>
+      </svg>
+  
+      <!-- Button Text -->
+      <span class="font-metropolis font-bold text-[16px] leading-[22px] text-white">
+        Download for iOS
+      </span>
+    </div>
+  
+    <!-- Second Button: Download for Android -->
+    <div
+      class="absolute left-[251px] top-0 w-[264.56px] h-[65.15px] bg-[#FF5634] rounded-[14px] flex items-center gap-2 px-3"
+    >
+      <!-- Android Icon (white fill) -->
+      <svg width="21" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M21.638 12.9768C20.9648 12.9768 20.4172 12.4288 20.4172 11.7556C20.4172 11.0823 20.9648 10.5347 21.638 10.5347C22.3113 10.5347 22.8589 11.0822 22.8589 11.7556C22.8589 12.4289 22.3113 12.9768 21.638 12.9768ZM8.14324 12.9768C7.47004 12.9768 6.92242 12.4288 6.92242 11.7556C6.92242 11.0823 7.46993 10.5347 8.14324 10.5347C8.81645 10.5347 9.36407 11.0822 9.36407 11.7556C9.36407 12.4289 8.81656 12.9768 8.14324 12.9768ZM22.0759 5.62239L24.516 1.39633C24.5831 1.2797 24.6013 1.14119 24.5665 1.01119C24.5316 0.881188 24.4466 0.770315 24.3301 0.702899C24.2135 0.635762 24.075 0.617621 23.945 0.652455C23.815 0.687288 23.7042 0.772252 23.6367 0.888714L21.1661 5.16818C19.2767 4.30603 17.1548 3.82568 14.8906 3.82568C12.6264 3.82568 10.5046 4.30603 8.61521 5.16818L6.14452 0.888714C6.07708 0.772252 5.96621 0.687288 5.83622 0.652455C5.70622 0.617621 5.56772 0.635762 5.45109 0.702899C5.33454 0.770252 5.24949 0.881126 5.21465 1.01115C5.17981 1.14118 5.19801 1.27972 5.26527 1.39633L7.70535 5.62239C3.51538 7.90124 0.6497 12.1431 0.230469 17.1545H29.5508C29.1312 12.1432 26.2655 7.90124 22.0759 5.62228" fill="white"/>
+      </svg>
+        
+  
+      <!-- Button Text -->
+      <span class="font-thicccboi font-bold text-[16px] leading-[22px] text-white">
+        Download for Android
+      </span>
+    </div>
+  </div>
+  <!-- Container with specified position and border -->
+  <div class="absolute left-[109.81px] top-[1645.05px] w-[1220.3857px] border-[1px] border-black">
+    <!-- SVG line using Tailwind classes -->
+    <svg class="w-[1222px] h-[1px]" viewBox="0 0 1222 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0.806641" y1="0.5" x2="1221.19" y2="0.5" stroke="#CACACA"/>
+    </svg>   
+  </div>
+
+  <!-- Footer Column: "Menu" (Positioned in PX) -->
+  <div class="absolute left-[110px] top-[1765px] w-[229px] h-[234px] flex flex-col items-start gap-[40px]">
+    <!-- Footer Title -->
+    <h3 class="w-[54px] h-[22px] font-metropolis font-bold text-[20px] leading-[22px] text-[#121212] ml-4">
+      Menu
+    </h3>
+    
+    <!-- Row container for link columns (229×172) -->
+    <div class="flex flex-row items-start gap-[45px] w-[229px] h-[172px]">
+      <!-- First Column: 5 links, height = 172px -->
+      <div class="flex flex-col items-start gap-[18px] w-[92px] h-[172px]">
+        <a class="flex items-center justify-center w-full h-[20px] font-metropolis font-normal text-[18px] leading-[20px] text-center text-[#3F3F3F]">
+          Home
+        </a>
+        <a class="flex items-center justify-center w-full h-[20px] font-metropolis font-normal text-[18px] leading-[20px] text-center text-[#3F3F3F]">
+          About
+        </a>
+        <a class="flex items-center justify-center w-full h-[20px] font-metropolis font-normal text-[18px] leading-[20px] text-center text-[#3F3F3F]">
+          Contact
+        </a>
+        <a class="flex items-center justify-center w-full h-[20px] font-metropolis font-normal text-[18px] leading-[20px] text-center text-[#3F3F3F]">
+          Blog
+        </a>
+        <a class="flex items-center justify-center w-full h-[20px] font-metropolis font-normal text-[18px] leading-[20px] text-center text-[#3F3F3F]">
+          Post
+        </a>
+      </div>
+      
+      <!-- Second Column: 2 links, same top alignment, height = 172px -->
+      <div class="flex flex-col items-start gap-[18px] w-[92px] h-[172px]">
+        <a class="flex items-center justify-center w-full h-[20px] font-metropolis font-normal text-[18px] leading-[20px] text-center text-[#3F3F3F] whitespace-nowrap">
+          Plan Single
+        </a>
+        <a class="flex items-center justify-center w-full h-[20px] font-metropolis font-normal text-[18px] leading-[20px] text-center text-[#3F3F3F]">
+          Register
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Second Footer Column (positioned in PX) -->
+  <div class="absolute left-[497px] top-[1765px] w-[175px] h-[272px] flex flex-col items-start gap-[40px]">
+    <!-- Footer Title -->
+    <h3 class="w-[125px] h-[22px] font-metropolis font-bold text-[20px] leading-[22px] text-[#121212] whitespace-nowrap">
+      Utility Pages
+    </h3>
+    <!-- Row container for links -->
+    <div class="flex flex-row items-start gap-[40px] w-[175px] h-[210px]">
+      <!-- Single Column of Footer Links -->
+      <div class="flex flex-col items-start gap-[18px] w-[175px] h-[210px]">
+        <a href="#" class="font-metropolis font-normal text-[18px] leading-[20px] text-[#3F3F3F] whitespace-nowrap">
+          Start Here
+        </a>
+        <a href="#" class="font-metropolis font-normal text-[18px] leading-[20px] text-[#3F3F3F] whitespace-nowrap">
+          Stylesguide
+        </a>
+        <a href="#" class="font-metropolis font-normal text-[18px] leading-[20px] text-[#3F3F3F] whitespace-nowrap">
+          Password Protected
+        </a>
+        <a href="#" class="font-metropolis font-normal text-[18px] leading-[20px] text-[#3F3F3F] whitespace-nowrap">
+          404 Not Found
+        </a>
+        <a href="#" class="font-metropolis font-normal text-[18px] leading-[20px] text-[#3F3F3F] whitespace-nowrap">
+          Licenses
+        </a>
+        <a href="#" class="font-metropolis font-normal text-[18px] leading-[20px] text-[#3F3F3F] whitespace-nowrap">
+          Chanelog
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Absolute link container (213×20) at left=497px, top=2056px -->
+  <div class="absolute left-[497px] top-[2056px] w-[213px] h-[20px] flex flex-row items-start gap-[6px]">
+    <!-- Master Link -->
+    <a href="#" class="flex flex-row items-center w-[213px] h-[20px] font-metropolis font-semibold text-[18px] leading-[20px] text-center underline text-[#FF5634] whitespace-nowrap">
+      Browse for More Template
+    </a>
+  </div>
+
+
+<div class="absolute left-[830px] top-[1765px] w-[502px] h-[172px]">
+    <!-- Heading -->
+    <h3 class="font-metropolis font-bold text-[18px] leading-[24px] text-[#121212] mb-3">
+      Available in
+    </h3>
+    
+    <!-- 2×2 Grid -->
+    <div class="grid grid-cols-2 grid-rows-2 gap-4 mt-10">
+      <!-- Row 1, Col 1 -->
+      <div class="flex items-center gap-2">
+        <!-- Icon -->
+        <div class="w-[78px] h-[78px] bg-[#F1F1F1] rounded-[24px] flex items-center justify-center">
+            <svg width="46" height="38" viewBox="0 0 46 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24.0781 2.23828H21.9219V9.7852H24.0781V2.23828Z" fill="#E13F1F"/>
+                <path d="M30.5469 2.23828H28.3906V9.7852H30.5469V2.23828Z" fill="#E13F1F"/>
+                <path d="M43.4844 2.23828H41.3281V9.7852H43.4844V2.23828Z" fill="#E13F1F"/>
+                <path d="M4.67189 2.23828H2.51562V9.7852H4.67189V2.23828Z" fill="#E13F1F"/>
+                <path d="M11.1406 2.23828H8.98438V9.7852H11.1406V2.23828Z" fill="#E13F1F"/>
+                <path d="M17.6094 2.23828H15.4531V9.7852H17.6094V2.23828Z" fill="#E13F1F"/>
+                <path d="M37.0156 2.23828H34.8594V9.7852H37.0156V2.23828Z" fill="#E13F1F"/>
+                <path d="M45.6409 9.78516H0.359375V14.0977C3.9323 14.0977 6.82816 16.9935 6.82816 20.5665V30.2696H13.2969V23.8009C13.2969 18.4415 17.6407 14.0977 23.0001 14.0977C28.3595 14.0977 32.7033 18.4415 32.7033 23.8009V30.2696H39.1721V20.5665C39.1721 16.9935 42.068 14.0977 45.6409 14.0977V9.78516Z" fill="#E13F1F"/>
+                <path d="M42.4065 28.1133C40.62 28.1133 39.1721 27.0352 39.1721 27.0352C39.1721 27.0352 37.7242 28.1133 35.9377 28.1133C34.1512 28.1133 32.7033 27.0352 32.7033 27.0352C32.7033 27.0352 31.2554 28.1133 29.4689 28.1133C27.6824 28.1133 26.2345 27.0352 26.2345 27.0352C26.2345 27.0352 24.7866 28.1133 23.0001 28.1133C21.2137 28.1133 19.7657 27.0352 19.7657 27.0352C19.7657 27.0352 18.3178 28.1133 16.5313 28.1133C14.7449 28.1133 13.2969 27.0352 13.2969 27.0352C13.2969 27.0352 11.849 28.1133 10.0626 28.1133C8.27609 28.1133 6.82816 27.0352 6.82816 27.0352C6.82816 27.0352 5.38023 28.1133 3.59377 28.1133C1.8073 28.1133 0.359375 27.0352 0.359375 27.0352V35.6602C0.359375 36.8515 1.3243 37.8165 2.51564 37.8165H26.2345H35.9377H43.4846C44.6759 37.8165 45.6409 36.8515 45.6409 35.6602V27.0352C45.6409 27.0352 44.1929 28.1133 42.4065 28.1133Z" fill="#2AA4F4"/>
+                <path d="M45.6409 0.0820312H0.359375V2.23829H45.6409V0.0820312Z" fill="#FF5634"/>
+                </svg>
+                
+        </div>
+        <!-- Text -->
+        <span class="font-metropolis font-bold [18px] leading-[20px] text-[#121212] whitespace-nowrap">
+          San Francisco, CA
+        </span>
+      </div>
+      
+      <!-- Row 1, Col 2 -->
+      <div class="flex items-center gap-2">
+        <div class="w-[78px] h-[78px] bg-[#F1F1F1] rounded-[24px] flex items-center justify-center">
+                <svg width="51" height="52" viewBox="0 0 51 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M39.5839 30.7266H11.041L4.63086 50.8173H45.9941L39.5839 30.7266Z" fill="#FF5634"/>
+                    <path d="M27.9536 14.1817L26.0154 0.609812C25.8996 -0.203271 24.7261 -0.203271 24.6091 0.609812L22.6709 14.1817H27.9536Z" fill="#929292"/>
+                    <path d="M35.7398 16.8835L41.7788 4.57618C42.1405 3.83873 41.1702 3.1781 40.6171 3.78437L31.373 13.9089L35.7398 16.8835Z" fill="#929292"/>
+                    <path d="M37.9048 24.4056L49.2194 16.6636C49.8966 16.2003 49.3778 15.1473 48.5978 15.4026L35.5684 19.6666L37.9048 24.4056Z" fill="#929292"/>
+                    <path d="M36.3086 31.7119L49.9726 30.5939C50.7916 30.5265 50.8613 29.3554 50.0577 29.1911L36.6277 26.4375L36.3086 31.7119Z" fill="#929292"/>
+                    <path d="M19.2521 13.9089L10.008 3.78437C9.45494 3.1781 8.48468 3.83873 8.84631 4.57618L14.8853 16.8835L19.2521 13.9089Z" fill="#929292"/>
+                    <path d="M15.0567 19.6678L2.02731 15.4026C1.24732 15.1473 0.727324 16.2003 1.40568 16.6636L12.7203 24.4056L15.0567 19.6678Z" fill="#929292"/>
+                    <path d="M13.9978 26.4375L0.567784 29.1911C-0.237026 29.3566 -0.166118 30.5277 0.652874 30.5939L14.3169 31.7119L13.9978 26.4375Z" fill="#929292"/>
+                    <path d="M32.5007 43.7266H25.3117H18.1228C18.1228 43.7266 6.99374 43.7266 2.85742 51.9992H25.3117H47.766C43.6297 43.7266 32.5007 43.7266 32.5007 43.7266Z" fill="#CACACA"/>
+                    <path d="M25.3125 10.6367C16.7031 10.6367 11.1309 14.864 11.1309 23.8056C11.1309 39.6264 25.3125 41.3637 25.3125 41.3637C25.3125 41.3637 39.4942 39.6264 39.4942 23.8056C39.4942 14.864 33.922 10.6367 25.3125 10.6367Z" fill="#CACACA"/>
+                    <path d="M25.3122 15.3633C15.5694 15.3633 13.4941 21.4437 13.4941 27.1742C13.4941 34.9919 17.7238 38.9994 17.7238 38.9994H32.8994C32.8994 38.9994 37.1291 34.9919 37.1291 27.1742C37.1303 21.4437 35.055 15.3633 25.3122 15.3633Z" fill="#929292"/>
+                    <path d="M32.4033 37.5469H18.2217V45.3811C18.2217 45.3811 18.2217 49.6356 25.3125 49.6356C32.4033 49.6356 32.4033 45.3811 32.4033 45.3811V37.5469Z" fill="#929292"/>
+                    <path d="M34.7663 28.6561C34.7663 21.4873 30.5272 18.9062 25.3119 18.9062C20.0966 18.9062 15.8574 21.4873 15.8574 28.6561C15.8574 29.2151 15.8574 31.3471 15.8574 31.9061C15.8574 39.0726 20.0966 44.906 25.3119 44.906C30.5272 44.906 34.7663 39.0726 34.7663 31.9061C34.7663 31.3471 34.7663 29.2151 34.7663 28.6561Z" fill="#CACACA"/>
+                    </svg>
+                
+        </div>
+        <span class="font-metropolis font-bold text-[18px] leading-[20px] text-[#121212] whitespace-nowrap">
+          New York, NY
+        </span>
+      </div>
+      
+      <!-- Row 2, Col 1 -->
+      <div class="flex items-center gap-2">
+        <div class="w-[78px] h-[78px] bg-[#F1F1F1] rounded-[24px] flex items-center justify-center">
+            <svg width="50" height="46" viewBox="0 0 50 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.96094 38.6084C15.7273 34.6333 18.6596 11.9308 18.6596 11.9308L19.924 11.9297C19.924 11.9297 20.3601 29.3289 13.4004 38.6084H2.96094Z" fill="#E8AD8C"/>
+                <path d="M19.2002 12.1287L30.7997 0.529222C30.171 0.399308 29.5191 0.332031 28.8521 0.332031C23.521 0.332031 19.2002 4.65283 19.2002 9.98394V12.1287Z" fill="#4CAF50"/>
+                <path d="M19.1992 11.9328H37.727C35.6101 9.11988 32.2544 7.29297 28.4637 7.29297C24.673 7.29297 21.3161 9.11988 19.1992 11.9328Z" fill="#4CAF50"/>
+                <path d="M21.1692 11.9297H19.0117L31.7711 24.6891C31.8894 24.05 31.959 23.3934 31.959 22.7195C31.959 16.7597 27.1279 11.9297 21.1692 11.9297Z" fill="#4CAF50"/>
+                <path d="M19.2 12.1287L7.60059 0.529222C8.22928 0.399308 8.88117 0.332031 9.54813 0.332031C14.8792 0.332031 19.2 4.65283 19.2 9.98394V12.1287Z" fill="#4CAF50"/>
+                <path d="M19.1997 11.9328H0.671875C2.78878 9.11988 6.1445 7.29297 9.9352 7.29297C13.7259 7.29297 17.0828 9.11988 19.1997 11.9328Z" fill="#4CAF50"/>
+                <path d="M17.2302 11.9297H19.3877L6.62834 24.6891C6.51003 24.05 6.44043 23.3934 6.44043 22.7195C6.44043 16.7597 11.2716 11.9297 17.2302 11.9297Z" fill="#4CAF50"/>
+                <path d="M23.0264 37.0929L38.9188 45.5686H2.96052C1.67878 45.5686 0.640625 44.5305 0.640625 43.2487V36.2891H19.811C20.9327 36.2891 22.037 36.5651 23.0264 37.0929Z" fill="#FDB52A"/>
+                <path d="M45.8783 37.449C43.9563 37.449 42.3985 36.2891 42.3985 36.2891C42.3985 36.2891 40.8407 37.449 38.9186 37.449C36.9966 37.449 35.4388 36.2891 35.4388 36.2891C35.4388 36.2891 33.881 37.449 31.959 37.449C30.0369 37.449 28.4791 36.2891 28.4791 36.2891C28.4791 36.2891 26.9213 37.449 24.9993 37.449C24.1804 37.449 23.4368 37.2367 22.8418 36.9943L38.9186 45.5686H47.0383C48.32 45.5686 49.3582 44.5305 49.3582 43.2487V36.2891C49.3582 36.2891 47.8004 37.449 45.8783 37.449Z" fill="#2AA4F4"/>
+                </svg>
+                
+        </div>
+        <span class="font-metropolis font-bold text-[18px] leading-[20px] text-[#121212] whitespace-nowrap">
+          Los Angeles, CA
+        </span>
+      </div>
+      
+      <!-- Row 2, Col 2 -->
+      <div class="flex items-center gap-2">
+        <div class="w-[78px] h-[78px] bg-[#F1F1F1] rounded-[24px] flex items-center justify-center">
+            <svg width="46" height="70" viewBox="0 0 46 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M31.2031 85.4374H14.7969L18.8984 36.2188H27.1015L31.2031 85.4374Z" fill="#929292"/>
+                <path d="M21.3594 85.4374H14.7969L18.8984 36.2188H21.3594V85.4374Z" fill="#CACACA"/>
+                <path d="M23.5469 16.5312C23.3314 16.5313 23.118 16.512 22.9189 16.4746C22.7198 16.4371 22.5389 16.3822 22.3865 16.3129C22.2341 16.2437 22.1133 16.1614 22.0309 16.0709C21.9485 15.9804 21.9061 15.8834 21.9063 15.7855V0.870737C21.9063 0.672955 22.0791 0.483274 22.3868 0.343421C22.6945 0.203569 23.1118 0.125 23.5469 0.125C23.982 0.125 24.3993 0.203569 24.707 0.343421C25.0146 0.483274 25.1875 0.672955 25.1875 0.870737V15.7855C25.1876 15.8834 25.1453 15.9804 25.0629 16.0709C24.9805 16.1614 24.8596 16.2437 24.7072 16.3129C24.5549 16.3822 24.374 16.4371 24.1749 16.4746C23.9758 16.512 23.7624 16.5313 23.5469 16.5312Z" fill="#1D88FE"/>
+                <path d="M17.3486 13.25H28.6507C29.5209 13.25 30.3555 13.5957 30.9709 14.2111C31.5862 14.8264 31.9319 15.661 31.9319 16.5312V23.0937H14.0674V16.5312C14.0674 15.661 14.4131 14.8264 15.0284 14.2111C15.6438 13.5957 16.4784 13.25 17.3486 13.25Z" fill="#8FC3FF"/>
+                <path d="M36.125 23.0939H9.87499C8.06281 23.0939 6.59375 24.5629 6.59375 26.3751C6.59375 28.1873 8.06281 29.6564 9.87499 29.6564H36.1249C37.9371 29.6564 39.4062 28.1873 39.4062 26.3751C39.4062 24.5629 37.9371 23.0939 36.125 23.0939Z" fill="#1D88FE"/>
+                <path d="M43.7812 29.6562H2.21875C1.01063 29.6562 0.03125 30.6356 0.03125 31.8437C0.03125 33.0519 1.01063 34.0312 2.21875 34.0312H43.7812C44.9893 34.0312 45.9687 33.0519 45.9687 31.8437C45.9687 30.6356 44.9893 29.6562 43.7812 29.6562Z" fill="#8FC3FF"/>
+                <path d="M36.125 34.0312H9.87499C8.06281 34.0312 6.59375 35.5003 6.59375 37.3125C6.59375 39.1247 8.06281 40.5937 9.87499 40.5937H36.1249C37.9371 40.5937 39.4062 39.1247 39.4062 37.3125C39.4062 35.5003 37.9371 34.0312 36.125 34.0312Z" fill="#1D88FE"/>
+                </svg>
+                
+        </div>
+        <span class="font-metropolis font-bold text-[18px] leading-[20px] text-[#121212] whitespace-nowrap">
+          Seattle, WA
+        </span>
+      </div>
+    </div>
+  </div>
+  <!-- Container with specified position and border -->
+<div
+class="absolute left-[109.81px] top-[2157px] w-[1220.3857px]
+       border border-[#CACACA] h-auto"
+>
+<!-- SVG line -->
+<svg
+  width="1222"
+  height="1"
+  viewBox="0 0 1222 1"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <line
+    x1="0.806641"
+    y1="0.5"
+    x2="1221.19"
+    y2="0.5"
+    stroke="#CACACA"
+  />
+</svg>
+</div>
+<!-- Container with the specified position and size -->
+<div
+  class="absolute left-[433px] top-[2189px] w-[692px] h-[25.0869px]"
+>
+  <!-- Paragraph with Metropolis font, 18px size, 30px line-height, #3F3F3F color -->
+  <p
+    class="font-metropolis font-normal text-[18px] leading-[30px] text-[#3F3F3F]"
+  >
+    Copyright © Delivery X | Designed by BRIX Templates – Powered by Webflow
+  </p>
+</div>
+
+</body>
+</html>
+ 
