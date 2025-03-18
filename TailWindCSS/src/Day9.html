@@ -9,6 +9,32 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        .feature-grid {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        @media (max-width: 768px) {
+            .pricing-section {
+                flex-direction: column;
+                gap: 3rem;
+            }
+            
+            .plan-content {
+                padding: 0 1.5rem;
+            }
+        }
+    </style>
   </head>
   <body class="w-full min-h-screen overflow-x-hidden overflow-y-auto font-[Poppins] bg-white text-base max-[480px]:text-sm max-[480px]:bg-gray-100">
     <div class="origin-top-left md:scale-100 scale-[0.5]">
