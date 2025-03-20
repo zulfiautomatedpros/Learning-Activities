@@ -28,6 +28,9 @@ body {
   gap: 16px;
   z-index: 999;
 }
+.navigation-v2 .main-menu-v2{
+  margin-top: 172px;
+}
 .logo-frame {
   display: flex;
   align-items: center;
@@ -46,9 +49,10 @@ body {
   gap: 8px;
   background: #000;
   border-radius: 48px;
-  padding: 8px;
-  margin-top: 8px;
+  padding-top: 6px;
+  padding-bottom: 6px;
   flex-shrink: 0;
+ 
 }
 .menu-item {
   display: flex;
@@ -148,9 +152,6 @@ body {
   white-space: nowrap;
 }
 
-/* ======================
-   MCDONALD’S PANEL
-====================== */
 .profile-widget {
   display: flex;
   justify-content: space-between;
@@ -161,6 +162,7 @@ body {
   background: rgba(0, 0, 0, 0.05);
   border-radius: 16px;
   margin-bottom: 20px;
+  margin-right: 16px;
 }
 .mcdonald-section {
   display: flex;
@@ -204,17 +206,19 @@ body {
   padding: 32px;
   background: #FFF;
   border-radius: 24px;
+  height: 76vh;
 }
 .preparing-title {
   text-align: center;
   font-size: 32px;
   font-weight: 700;
   margin: 0 auto;
+  font-family: DM Sans;
 }
 .preparing-orders {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content:center;
   gap: 8px;
   width: 715px; /* 5 columns × 106px + small gap */
   max-width: 100%;
@@ -246,6 +250,8 @@ body {
   padding: 32px;
   background: #FFF;
   border-radius: 24px;
+  height: 76vh;
+  margin-right: 16px;
 }
 .ready-title {
   text-align: center;
@@ -260,6 +266,7 @@ body {
   width: 335px; 
   max-width: 100%;
   margin: 0 auto;
+  justify-content: start;
 }
 .ready-big {
   display: flex;
@@ -279,7 +286,13 @@ body {
   background: #119717;
   border-radius: 16px;
 }
-.ready-order-number {
+.ready-small .ready-order-number {
+  font-weight: 700;
+  font-size: 24px;
+  color: #FFF;
+}
+
+.ready-big .ready-order-number {
   font-weight: 700;
   font-size: 32px;
   color: #FFF;
@@ -288,17 +301,20 @@ body {
 /* ======================
    MOBILE OVERRIDES
 ====================== */
-@media (max-width: 480px) {
- 
+@media (max-width: 768px) {
+  .header-nav-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
   .main-container {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-    margin-left: 0; /* remove any left offset if present */
+    margin: 2px; /* remove any left offset if present */
     width: 100%;
   }
   .navigation-v2 {
-    position: static;
+    position: relative;
     width: 100%;
     height: auto;
     padding: 8px 16px;
@@ -307,14 +323,20 @@ body {
     align-items: center;
     justify-content: space-between;
     background: #fff;
+    order: 1;
+    border-radius: 100px;
+  }
+  .menu-item.active {
+    background: #FF5634;
   }
   /* Profile & notification in one row */
   .other-links {
-    order: 2;              /* Profile & notification on the right */
+    order: 1;              /* Profile & notification on the right */
     margin-left: auto;     /* Keep them pinned to the right */
     flex-direction: row;   /* Side-by-side, not stacked */
     align-items: center;
     gap: 8px;
+    border-radius: 24px;
   }
   /* Move the logo to the right side */
   .logo-frame {
@@ -333,9 +355,7 @@ body {
     justify-content: space-around;
     align-items: center;
     background: #000;
-    /* 10px left/right padding, slight top/bottom padding */
     padding: 8px 10px;
-    /* Rounded corners */
     border-radius: 24px;
     z-index: 9999;
     width: auto; /* let the bar shrink to its contents */
@@ -343,36 +363,55 @@ body {
   .menu-item {
     width: 48px;
     height: 48px;
-    background: transparent;
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
+    
   }
 
  
   .header {
-    position: static;
+    position: relative;
     margin-left: 0;
+    order: 2;
   }
   /* Also make the profile-widget full width if desired */
   .profile-widget {
     margin-left: 0;
     width: 100%;
-    border-radius: 0;
+    border-radius: 14px;
   }
   .preparing-frame,
   .ready-frame {
     width: 50% !important;
     min-width: 0 !important;   /* remove any forced 300px/250px, etc. */
     margin-bottom: 0;
-    /* Optionally reduce padding if content is too wide:
-       padding: 16px !important; 
-    */
   }
 
   /* Ensure their internal “orders” don’t force extra width */
-  .preparing-orders,
+  .preparing-orders {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
   .ready-orders {
     width: 100% !important;
     max-width: 100% !important;
+    margin-left: 37px;
+  }
+  .ready-big{
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 106px;
+      height: 64px;
+      background: #119717;
+      border-radius: 16px;
+    
+  }
+  .ready-big .ready-order-number {
+    font-weight: 700;
+    font-size: 24px;
+    color: #FFF;
   }
 }
 
