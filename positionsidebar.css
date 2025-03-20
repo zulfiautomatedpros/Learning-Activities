@@ -301,17 +301,15 @@ body {
 /* ======================
    MOBILE OVERRIDES
 ====================== */
-@media (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 991.98px) {
   .header-nav-wrapper {
     display: flex;
     flex-direction: column;
   }
   .main-container {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    margin: 2px; /* remove any left offset if present */
-    width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    
   }
   .navigation-v2 {
     position: relative;
@@ -380,22 +378,18 @@ body {
     width: 100%;
     border-radius: 14px;
   }
-  .preparing-frame,
-  .ready-frame {
-    width: 50% !important;
-    min-width: 0 !important;   /* remove any forced 300px/250px, etc. */
-    margin-bottom: 0;
-  }
+ 
 
   /* Ensure their internal “orders” don’t force extra width */
   .preparing-orders {
     width: 100% !important;
     max-width: 100% !important;
+    justify-content: center;
   }
   .ready-orders {
     width: 100% !important;
     max-width: 100% !important;
-    margin-left: 37px;
+    justify-content: center;
   }
   .ready-big{
 
@@ -414,7 +408,7 @@ body {
     color: #FFF;
   }
 }
-@media (min-width: 781px) {
+@media (min-width: 991.99px) {
   .main-container {
     display: grid;
     gap: 24px;
