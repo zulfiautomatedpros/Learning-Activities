@@ -1,221 +1,208 @@
-/* =========================================
-   GLOBAL & BODY
-========================================= */
+/* Base Font Size */
+html {
+  font-size: 16px;
+  height: 100%;
+}
+
+/* General Reset */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  background: linear-gradient(67.75deg, #FFFFFF 19.18%, #FFEBE7 75.31%);
+  padding: 1rem;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* McDonald's Info Card */
+.mcdonald-card {
+  display: flex;
+  width: 100%;
+  height: 92px;
+  padding: 16px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.mcd-logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: -1%;
+}
+
+.mcd-logo img {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+}
+
+.time {
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: -3%;
+}
+
+/* Grid Wrapper */
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 383px;
+  gap: 16px;
+  width: 100%;
+  flex-grow: 1;
+  margin-top: 16px;
+}
+
+/* General Section Styles */
+.section {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Preparing Section */
+.section-preparing {
+  max-width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  padding: 24px;
+  gap: 24px;
+  background: #FFFFFF;
+}
+
+/* Ready Section */
+.section-ready {
+  width: 383px;
+  height: 100%;
+  border-radius: 24px;
+  padding: 24px;
+  gap: 24px;
+  background: #FFFFFF;
+}
+
+.section h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: -3%;
+}
+
+.box-item {
+  overflow-y: auto;
+  flex-grow: 2;
+}
+
+.items {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.item {
+  display: flex;
+  width: 106px;
+  height: 64px;
+  align-items: center;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.10);
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: -0.48px;
+  justify-content: center;
+}
+
+.section-ready .item {
+  background: #119717;
+  color: white;
+}
+
+.section-ready .item:first-child {
+  justify-content: center;
+  width: 100%;
+  height: 128px;
+  font-size: 32px;
+  padding: 24px;
+}
+
+.section-preparing .item {
+  background: #0000001A;
+  color: black;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 48rem) {
+  .grid-wrapper {
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
   }
-  
-  body {
-    padding: 14px;
-    font-family: 'DM Sans', sans-serif;
-    background: linear-gradient(to right, #FFFFFF, #FFEBE7);
-    min-height: 100vh;
+
+  .section {
+      height: auto;
+      min-height: 400px;
   }
-  
-  /* =========================================
-     PROFILE WIDGET (TOP BAR)
-  ========================================= */
-  .profile-widget {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 24px;
-    gap: 16px;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.05);
-    border-radius: 16px;
-    margin-bottom: 20px;
+
+  .section h2 {
+      font-size: 24px;
   }
-  
-  .mcdonald-section {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
-  
-  .image2 {
-    width: 60px;
-    height: 60px;
-    background: url('mcdonalds.png') no-repeat center/cover;
-    border-radius: 16px;
-  }
-  
-  .mcdonald-text-frame p {
-    margin: 0;
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: -0.01em;
-  }
-  
-  .time-display {
-    font-weight: 700;
-    font-size: clamp(1.5rem, 4vw, 2rem);
-    color: #000000;
-  }
-  
-  /* =========================================
-     MAIN CONTAINER
-  ========================================= */
-  .main-container {
-    display: flex;
-    gap: 24px;
-    flex-wrap: wrap;
-    width: 100%;
-  }
-  
-  /* ========== PREPARING SECTION ========== */
-  .preparing-frame {
-    flex: 2 1 790px;
-    min-width: 300px;
-    display: flex;
-    height: 694px;
-    flex-direction: column;
-    gap: 24px;
-    padding: 32px;
-    background: #FFFFFF;
-    border-radius: 24px;
-  }
-  
-  .preparing-title {
-    font-size: 32px;
-    font-weight: 700;
-    color: #000000;
-    text-align: center;
-  }
-  
-  .preparing-orders {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: 12px;
-    width: 100%;
-  }
-  
-  .order-num {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 12px;
-    background: rgba(0, 0, 0, 0.1);
-    border-radius: 16px;
-    min-height: 64px;
-  }
-  
-  .order-number {
-    font-size: 24px;
-    font-weight: 700;
-    color: #000000;
-  }
-  
-  /* ========== READY SECTION ========== */
-  .ready-frame {
-    flex: 1 1 300px;
-    min-width: 250px;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    padding: 32px;
-    background: #FFFFFF;
-    border-radius: 24px;
-  }
-  
-  .ready-title {
-    font-size: 32px;
-    font-weight: 700;
-    color: #000000;
-    text-align: center;
-  }
-  
-  .ready-orders {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    flex-direction: column;
-    gap: 12px;
-    width: 100%;
-  }
-  
-  .ready-big {
-    grid-column: 1 / -1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 24px;
-    background: #119717;
-    border-radius: 16px;
-    min-height: 128px;
-  }
-  
-  .ready-small {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 12px;
-    background: #119717;
-    border-radius: 16px;
-    min-height: 64px;
-  }
-  
-  .ready-big .ready-order-number {
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: -0.03em;
-    width: auto; /* Remove fixed width */
-    height: auto; /* Remove fixed height */
-  }
-  .ready-order-number {
-    font-size: 24px;
-    font-weight: 700;
-    color: #FFFFFF;
-  }
-  
-  
-  /* =========================================
-     RESPONSIVE ADJUSTMENTS
-  ========================================= */
-  @media (max-width: 768px) {
-    .main-container {
-      flex-direction: column;
-    }
-  
-    .preparing-orders {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  
-    .profile-widget {
-      padding: 12px;
-    }
-  
-    .image2 {
-      width: 50px;
+
+  .item {
+      width: 80px;
       height: 50px;
-    }
-  
-    .mcdonald-text-frame p {
       font-size: 18px;
-    }
-    .ready-orders {
-        grid-template-columns: repeat(3, 1fr);
-      }
-      
-      .ready-small {
-        aspect-ratio: unset; /* Allow rectangle shape on mobile */
-        min-height: 60px;
-      }
   }
-  
-  @media (max-width: 480px) {
-    .preparing-orders {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  
-    .preparing-frame,
-    .ready-frame {
-      padding: 24px;
-    }
-  
-    .order-number,
-    .ready-order-number {
+
+  .section-ready .item:first-child {
+      height: 100px;
+      font-size: 24px;
+  }
+
+  .section-ready {
+      width: 100%;
+      height: 100%;
+  }
+}
+
+@media (max-width: 30rem) {
+  .grid-wrapper {
+      grid-template-columns: 1fr 1fr;
+      gap: 4px;
+  }
+
+  .mcd-logo img {
+      width: 40px;
+      height: 40px;
+  }
+
+  .time {
       font-size: 20px;
-    }
   }
+
+  .section h2 {
+      font-size: 20px;
+  }
+
+  .item {
+      width: 60px;
+      height: 40px;
+      font-size: 16px;
+  }
+
+  .section-ready .item:first-child {
+      height: 80px;
+      font-size: 20px;
+  }
+}
